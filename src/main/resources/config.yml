@@ -1,0 +1,68 @@
+drop_trinkets_on_death: true
+
+trinket_menu_size: 9
+trinket_title: '&8Trinkets'
+
+filler_item: # Items to be placed in "locked off" slots, or unusable slots
+  type: GRAY_STAINED_GLASS_PANE
+  data: -1
+  display_name: '&8'
+  lore: []
+
+trinket_types:
+  0: # This determines the trinket ID items should have to be considered this type of trinket
+    name: '&8Ring' # The display name as lore put on the item when a trinket type is set
+    valid_slots: [ 0, 2 ] # The item slots in the trinket menu where the
+    placeholder: # essentially the "icon" of the trinket type in the trinkets menu
+      type: ROTTEN_FLESH
+      data: 5829310
+      display_name: '&8[Ring]'
+      lore: []
+  1:
+    name: '&8Necklace'
+    valid_slots: [ 4 ]
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829311
+      display_name: '&8[Necklace]'
+      lore: []
+  2:
+    name: '&8Armband'
+    valid_slots: [ 6, 8 ]
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829312
+      display_name: '&8[Armband]'
+      lore: []
+  3:
+    name: '&8Belt'
+    valid_slots: []
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829313
+      display_name: '&8[Belt]'
+      lore: []
+  4:
+    name: '&8Mask'
+    valid_slots: []
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829314
+      display_name: '&8[Mask]'
+      lore: []
+  5:
+    name: '&8Pin'
+    valid_slots: []
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829315
+      display_name: '&8[Pin]'
+      lore: []
+  6:
+    name: '&8Circlet'
+    valid_slots: []
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829316
+      display_name: '&8[Circlet]'
+      lore: []
