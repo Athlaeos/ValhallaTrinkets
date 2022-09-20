@@ -3,6 +3,8 @@ package me.athlaeos.valhallatrinkets.listener;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
+import org.bukkit.GameRule;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
@@ -15,9 +17,11 @@ import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class TrinketsListener implements Listener {
     private final boolean dropTrinketsOnDeath;
@@ -29,7 +33,16 @@ public class TrinketsListener implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e){
         if (!e.getKeepInventory() && dropTrinketsOnDeath){
-            e.getDrops().addAll(TrinketsManager.getInstance().getTrinketInventory(e.getEntity()).values());
+            e.getDrops().addAll(TrinketsManager.getInstance().getTrinketInventory(e.getEntity()).values().stream().filter(
+                    itemStack -> {
+                        Boolean keepInventory = e.getEntity().getWorld().getGameRuleValue(GameRule.KEEP_INVENTORY);
+                        if (keepInventory != null && keepInventory) return true;
+                        ItemMeta meta = itemStack.getItemMeta();
+                        if (meta != null){
+                            return !meta.hasEnchant(Enchantment.VANISHING_CURSE);
+                        }
+                        return true;
+                    }).collect(Collectors.toSet()));
             TrinketsManager.getInstance().setTrinketInventory(e.getEntity(), new HashMap<>());
         }
     }
