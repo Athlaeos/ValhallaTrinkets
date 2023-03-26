@@ -32,7 +32,7 @@ public class TrinketTypeSetModifier extends DynamicItemModifier {
     }
 
     @Override
-    public ItemStack processItem(Player player, ItemStack itemStack) {
+    public ItemStack processItem(Player player, ItemStack itemStack, int i) {
         TrinketType type = TrinketsManager.getInstance().getTrinketTypes().get((int) strength);
         if (type == null || (int) strength < 0){
             TrinketsManager.getInstance().setType(itemStack, null);

@@ -4,7 +4,7 @@ trinket_menu_size: 9
 trinket_title: '&8Trinkets'
 
 filler_item: # Items to be placed in "locked off" slots, or unusable slots
-  type: GRAY_STAINED_GLASS_PANE
+  type: GRAY_STAINED_GLASS_PANELOL
   data: -1
   display_name: '&8'
   lore: []

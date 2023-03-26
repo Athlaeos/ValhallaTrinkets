@@ -1,6 +1,7 @@
 package me.athlaeos.valhallatrinkets;
 
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
@@ -11,7 +12,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TrinketsManager {
     private static TrinketsManager manager = null;
@@ -137,13 +137,23 @@ public class TrinketsManager {
         if (meta == null) return;
         if (type == null){
             meta.getPersistentDataContainer().remove(trinketIDKey);
-            meta.getPersistentDataContainer().remove(unstackableKey);
         } else {
             meta.getPersistentDataContainer().set(trinketIDKey, PersistentDataType.INTEGER, type.getId());
-            meta.getPersistentDataContainer().set(unstackableKey, PersistentDataType.STRING, UUID.randomUUID().toString());
         }
         i.setItemMeta(meta);
         setTrinketTypeLore(i);
+    }
+
+    public void setUnstackable(ItemStack i, boolean unstackable){
+        if (i == null) return;
+        ItemMeta meta = i.getItemMeta();
+        if (meta == null) return;
+        if (!unstackable){
+            meta.getPersistentDataContainer().remove(unstackableKey);
+        } else {
+            meta.getPersistentDataContainer().set(unstackableKey, PersistentDataType.STRING, UUID.randomUUID().toString());
+        }
+        i.setItemMeta(meta);
     }
 
     public void randomizeUUID(ItemStack i){
@@ -187,25 +197,20 @@ public class TrinketsManager {
         if (i == null) return;
         ItemMeta meta = i.getItemMeta();
         if (meta == null) return;
-        List<String> lore;
+        List<String> lore = meta.getLore();
+        if (lore == null) lore = new ArrayList<>();
         List<String> finalLore = new ArrayList<>();
-        if (meta.hasLore()){
-            assert meta.getLore() != null;
-            lore = new ArrayList<>(meta.getLore());
-        } else {
-            lore = new ArrayList<>();
-        }
 
+        loreLoop:
         for (String l : lore){
-            if (!trinketTypes.values().stream().map(TrinketType::getDisplayName).map(Utils::chat).collect(Collectors.toSet()).contains(l)){
-                finalLore.add(l);
+            for (TrinketType type : trinketTypes.values()){
+                if (l.contains(ChatColor.stripColor(Utils.chat(type.getDisplayName())))) continue loreLoop;
             }
+            finalLore.add(l);
         }
         TrinketType type = getTrinketType(i);
         if (type != null){
-            if (finalLore.size() == 0){
-                finalLore.add(Utils.chat(type.getDisplayName()));
-            }
+            finalLore.add(Utils.chat(type.getDisplayName()));
         }
         meta.setLore(finalLore);
         i.setItemMeta(meta);

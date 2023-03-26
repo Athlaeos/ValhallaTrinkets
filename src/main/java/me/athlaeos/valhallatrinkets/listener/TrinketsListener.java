@@ -6,6 +6,7 @@ import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -26,7 +27,7 @@ public class TrinketsListener implements Listener {
         dropTrinketsOnDeath = ConfigManager.getInstance().getConfig("config.yml").get().getBoolean("drop_trinkets_on_death", true);
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.LOWEST)
     public void onPlayerDeath(PlayerDeathEvent e){
         if (!e.getKeepInventory() && dropTrinketsOnDeath){
             e.getDrops().addAll(TrinketsManager.getInstance().getTrinketInventory(e.getEntity()).values());
@@ -41,8 +42,12 @@ public class TrinketsListener implements Listener {
             if (!Utils.isItemEmptyOrNull(inHandItem)){
                 TrinketType type = TrinketsManager.getInstance().getTrinketType(inHandItem);
                 if (type != null){
-                    if (TrinketsManager.getInstance().getValidSlots().isEmpty()) return;
-                    if (!e.getPlayer().hasPermission("trinkets.allowtrinkets")) return;
+                    if (TrinketsManager.getInstance().getValidSlots().isEmpty()) {
+                        return;
+                    }
+                    if (!e.getPlayer().hasPermission("trinkets.allowtrinkets")) {
+                        return;
+                    }
                     Map<Integer, ItemStack> trinketInventory = TrinketsManager.getInstance().getTrinketInventory(e.getPlayer());
                     for (int i : type.getValidSlots()){
                         ItemStack existingItem = trinketInventory.get(i);

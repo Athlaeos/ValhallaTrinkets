@@ -25,12 +25,12 @@ public class TrinketMenu extends Menu {
     @Override
     public String getMenuName() {
         switch ((size - 9) / 9){
-            case 5: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF541" : title)) : title);
-            case 4: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF542" : title)) : title);
-            case 3: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF543" : title)) : title);
-            case 2: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF544" : title)) : title);
-            case 1: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF545" : title)) : title);
-            default: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF546" : title)) : title);
+            case 5: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF546" : title)) : title);
+            case 4: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF545" : title)) : title);
+            case 3: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF544" : title)) : title);
+            case 2: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF543" : title)) : title);
+            case 1: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF542" : title)) : title);
+            default: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF541" : title)) : title);
         }
     }
 
@@ -60,7 +60,7 @@ public class TrinketMenu extends Menu {
                                 if (cursorType.getValidSlots().contains(e.getSlot())){
                                     if (e.getCursor().isSimilar(e.getCurrentItem())){
                                         e.setCancelled(true);
-                                        InventoryUtils.calculateClickedSlot(e);
+                                        InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
                                         ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
                                                 TrinketsManager.getInstance().addTrinketUnsafe(who, inventory.getItem(e.getSlot()), e.getSlot());
                                                 setMenuItems();
@@ -88,7 +88,7 @@ public class TrinketMenu extends Menu {
                                 if (cursorType.getValidSlots().contains(e.getSlot())){
                                     inventory.setItem(e.getSlot(), null);
                                     TrinketsManager.getInstance().addTrinket(who, e.getCursor(), e.getSlot());
-                                    InventoryUtils.calculateClickedSlot(e);
+                                    InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
                                 }
                             }
                         }

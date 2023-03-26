@@ -1,0 +1,1712 @@
+# Alternative configuration
+shaped:
+  craft_gold_armband:
+    ingredients:
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_INGOT
+      '3':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_INGOT
+      '5':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_INGOT
+      '7':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_INGOT
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: GOLD_NUGGET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+        custom-model-data: 7781320
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: true
+  craft_gold_necklace:
+    ingredients:
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: STRING
+      '3':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: STRING
+      '5':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: STRING
+      '7':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_INGOT
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: GOLD_NUGGET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+        custom-model-data: 7781098
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: true
+  craft_gold_ring:
+    ingredients:
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+      '3':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+      '5':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+      '7':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: GOLD_NUGGET
+      meta:
+        ==: ItemMeta
+        meta-type: UNSPECIFIC
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+        custom-model-data: 7781099
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: true
+  craft_trinket_bezoar:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GREEN_DYE
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-bezoar>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_poison_damage_resistance> +30%"}],"text":""}'
+        custom-model-data: 7781500
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: POISON_DAMAGE_RESISTANCE:0.3
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_band_of_regeneration:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GHAST_TEAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-regeneration>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_healingbonus> +20.0%"}],"text":""}'
+        custom-model-data: 7781506
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: HEALING_BONUS:0.2
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_band_of_force:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: IRON_INGOT
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-force>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+25.0% <lang.translation_knockback>"}],"text":""}'
+        custom-model-data: 7781502
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_attributes: CUSTOM_KNOCKBACK:0.25:ADD_NUMBER
+          valhallatrinkets:trinket_id: 2i
+          valhallammo:valhalla_default_attributes: CUSTOM_KNOCKBACK:0.25:ADD_NUMBER
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_band_of_precision:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: FLINT
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-precision>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_chance> +10%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_damage> +20%"}],"text":""}'
+        custom-model-data: 7781504
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: CRIT_CHANCE:0.1;CRIT_DAMAGE:0.2
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_adhesive_bandaid:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: WHITE_WOOL
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-adhesive-bandaid>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_bleedresistance> +30.0%"}],"text":""}'
+        custom-model-data: 7781508
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: BLEED_RESISTANCE:0.3
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_armored_bracer:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-bracer>"}],"text":""}'
+          custom-model-data: 7781320
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: IRON_BLOCK
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-armored-bracer>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_armormultiplierbonus> +10.0%"}],"text":""}'
+        custom-model-data: 7781510
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: ARMOR_MULTIPLIER:0.1
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_magic_quiver:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: SPECTRAL_ARROW
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-magic-quiver>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_damage> +10%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_ammo_save> +10%"}],"text":""}'
+        custom-model-data: 7781522
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: ARCHERY_DAMAGE:0.1;ARCHERY_AMMO_SAVE:0.1
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_amulet_of_vitality:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GLISTERING_MELON_SLICE
+    result:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-vitality>"}],"text":""}'
+      lore:
+        - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+      custom-model-data: 7781530
+      attribute-modifiers:
+        GENERIC_MAX_HEALTH:
+          - ==: org.bukkit.attribute.AttributeModifier
+            amount: 4.0
+            name: generic.max_health
+            slot: CHEST
+            uuid: 037d16e1-5a40-4147-8d9b-c76f846c7e42
+            operation: 0
+      PublicBukkitValues:
+        valhallammo:valhalla_custom_attributes: GENERIC_MAX_HEALTH:4.0:ADD_NUMBER
+        valhallatrinkets:trinket_id: 1i
+        valhallammo:valhalla_default_attributes: GENERIC_MAX_HEALTH:4.0:ADD_NUMBER
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_amulet_of_adrenaline:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: FEATHER
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-adrenaline>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+        custom-model-data: 7781528
+        attribute-modifiers:
+          GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.1
+              name: generic.movement_speed
+              slot: CHEST
+              uuid: 9228504e-3140-4b88-9af8-97597fd20e76
+              operation: 1
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_attributes: GENERIC_MOVEMENT_SPEED:0.1:ADD_SCALAR
+          valhallatrinkets:trinket_id: 1i
+          valhallammo:valhalla_default_attributes: GENERIC_MOVEMENT_SPEED:0.1:ADD_SCALAR
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_cross_necklace:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: DIAMOND
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-cross-necklace>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_immunity_frame_flat_bonus> +3.0"}],"text":""}'
+        custom-model-data: 7781520
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: IMMUNITY_FRAME_FLAT_BONUS:3.0
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_amulet_of_mania:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: BLAZE_ROD
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-mania>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"<lang.enchantment_damage_taken> +50%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +30%"}],"text":""}'
+        custom-model-data: 7781524
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_TAKEN:0.5;DAMAGE_DEALT:0.3
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_amulet_of_the_avenger:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-necklace>"}],"text":""}'
+          custom-model-data: 7781098
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: BLAZE_POWDER
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-the-avenger>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +10%"}],"text":""}'
+        custom-model-data: 7781526
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_DEALT:0.1
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_deflection:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHERITE_SCRAP
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-deflection>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_projectile_damage_resistance> +10%"}],"text":""}'
+        custom-model-data: 7781540
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: PROJECTILE_DAMAGE_RESISTANCE:0.1
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_obsidian:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: OBSIDIAN
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-obsidian>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_fire_damage_resistance> +15%"}],"text":""}'
+        custom-model-data: 7781542
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: FIRE_DAMAGE_RESISTANCE:0.15
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_protection:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHERITE_INGOT
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-protection>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_resistance> +5%"}],"text":""}'
+        custom-model-data: 7781544
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_RESISTANCE:0.05
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_warding:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: EMERALD
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-warding>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_magic_damage_resistance> +10%"}],"text":""}'
+        custom-model-data: 7781550
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: MAGIC_DAMAGE_RESISTANCE:0.1
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_shattering:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: PRISMARINE_SHARD
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-shattering>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_flat_armor_penetration> +7%"}],"text":""}'
+        custom-model-data: 7781548
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: FRACTION_ARMOR_PENETRATION:0.07
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_juggernaut:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-armored-bracer>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_armormultiplierbonus> +10.0%"}],"text":""}'
+          custom-model-data: 7781510
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: ARMOR_MULTIPLIER:0.1
+            valhallatrinkets:trinket_id: 2i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-juggernaut>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_armormultiplierbonus> +30.0%"}],"text":""}'
+        custom-model-data: 7781511
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: ARMOR_MULTIPLIER:0.3
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_transfusion:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-adhesive-bandaid>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_bleedresistance> +30.0%"}],"text":""}'
+          custom-model-data: 7781508
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: BLEED_RESISTANCE:0.3
+            valhallatrinkets:trinket_id: 2i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-transfusion>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_bleedresistance> +90.0%"}],"text":""}'
+        custom-model-data: 7781509
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: BLEED_RESISTANCE:0.9
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_purity:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-bezoar>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_poison_damage_resistance> +30%"}],"text":""}'
+          custom-model-data: 7781500
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: POISON_DAMAGE_RESISTANCE:0.3
+            valhallatrinkets:trinket_id: 2i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-purity>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_poison_damage_resistance> +90%"}],"text":""}'
+        custom-model-data: 7781501
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: POISON_DAMAGE_RESISTANCE:0.9
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_titans_glove:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-force>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+25.0% <lang.translation_knockback>"}],"text":""}'
+          custom-model-data: 7781502
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_attributes: CUSTOM_KNOCKBACK:0.25:ADD_NUMBER
+            valhallatrinkets:trinket_id: 2i
+            valhallammo:valhalla_default_attributes: CUSTOM_KNOCKBACK:0.25:ADD_NUMBER
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-titans-glove>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"+75.0% <lang.translation_knockback>"}],"text":""}'
+        custom-model-data: 7781503
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_attributes: CUSTOM_KNOCKBACK:0.75:ADD_NUMBER
+          valhallatrinkets:trinket_id: 2i
+          valhallammo:valhalla_default_attributes: CUSTOM_KNOCKBACK:0.75:ADD_NUMBER
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_rebirth:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-regeneration>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_healingbonus> +20.0%"}],"text":""}'
+          custom-model-data: 7781506
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: HEALING_BONUS:0.2
+            valhallatrinkets:trinket_id: 2i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-rebirth>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_healingbonus> +60.0%"}],"text":""}'
+        custom-model-data: 7781507
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: HEALING_BONUS:0.6
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_deathbringer:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-band-of-precision>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_chance> +10%"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_damage> +20%"}],"text":""}'
+          custom-model-data: 7781504
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: CRIT_CHANCE:0.1;CRIT_DAMAGE:0.2
+            valhallatrinkets:trinket_id: 2i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-deathbringer>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Armband"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_chance> +20%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_crit_damage> +50%"}],"text":""}'
+        custom-model-data: 7781505
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: CRIT_CHANCE:0.2;CRIT_DAMAGE:0.5
+          valhallatrinkets:trinket_id: 2i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_palains_bane:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-shattering>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_flat_armor_penetration> +7%"}],"text":""}'
+          custom-model-data: 7781548
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: FRACTION_ARMOR_PENETRATION:0.07
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-paladins-bane>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_flat_armor_penetration> +20%"}],"text":""}'
+        custom-model-data: 7781549
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: FRACTION_ARMOR_PENETRATION:0.2
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_narya:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-obsidian>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_fire_damage_resistance> +15%"}],"text":""}'
+          custom-model-data: 7781542
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: FIRE_DAMAGE_RESISTANCE:0.15
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-narya>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_fire_damage_resistance> +45%"}],"text":""}'
+        custom-model-data: 7781543
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: FIRE_DAMAGE_RESISTANCE:0.45
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_athena:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-deflection>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_projectile_damage_resistance> +10%"}],"text":""}'
+          custom-model-data: 7781540
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: PROJECTILE_DAMAGE_RESISTANCE:0.1
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-athena>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_projectile_damage_resistance> +30%"}],"text":""}'
+        custom-model-data: 7781541
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: PROJECTILE_DAMAGE_RESISTANCE:0.3
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_magnus:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-warding>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_magic_damage_resistance> +10%"}],"text":""}'
+          custom-model-data: 7781550
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: MAGIC_DAMAGE_RESISTANCE:0.1
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-magnus>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_magic_damage_resistance> +30%"}],"text":""}'
+        custom-model-data: 7781551
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: MAGIC_DAMAGE_RESISTANCE:0.3
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_ring_of_reach:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GOLD_NUGGET
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.material-gold-ring>"}],"text":""}'
+          custom-model-data: 7781099
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENDER_EYE
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-reach>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_weapon_reach_bonus> +0.3"}],"text":""}'
+        custom-model-data: 7781546
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: WEAPON_REACH_BONUS:0.25
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: true
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_primordial_ring:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-protection>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_resistance> +5%"}],"text":""}'
+          custom-model-data: 7781544
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: DAMAGE_RESISTANCE:0.05
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-primordial-ring>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_resistance> +15%"}],"text":""}'
+        custom-model-data: 7781545
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_RESISTANCE:0.15
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_gungnirs_might:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-ring-of-reach>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_weapon_reach_bonus> +0.3"}],"text":""}'
+          custom-model-data: 7781546
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: WEAPON_REACH_BONUS:0.25
+            valhallatrinkets:trinket_id: 0i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-gungnirs-might>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Ring"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_weapon_reach_bonus> +0.75"}],"text":""}'
+        custom-model-data: 7781547
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: WEAPON_REACH_BONUS:0.75
+          valhallatrinkets:trinket_id: 0i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_divine_necklace:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-cross-necklace>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_immunity_frame_flat_bonus> +3.0"}],"text":""}'
+          custom-model-data: 7781520
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: IMMUNITY_FRAME_FLAT_BONUS:3.0
+            valhallatrinkets:trinket_id: 1i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-divine-necklace>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_immunity_frame_flat_bonus> +10.0"}],"text":""}'
+        custom-model-data: 7781521
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: IMMUNITY_FRAME_FLAT_BONUS:10.0
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_kratos:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-the-avenger>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +10%"}],"text":""}'
+          custom-model-data: 7781526
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: DAMAGE_DEALT:0.1
+            valhallatrinkets:trinket_id: 1i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-kratos>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +30%"}],"text":""}'
+        custom-model-data: 7781527
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_DEALT:0.3
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_fury:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-mania>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"<lang.enchantment_damage_taken> +50%"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +30%"}],"text":""}'
+          custom-model-data: 7781524
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: DAMAGE_TAKEN:0.5;DAMAGE_DEALT:0.3
+            valhallatrinkets:trinket_id: 1i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-fury>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"<lang.enchantment_damage_taken> +100%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_damage_dealt> +75%"}],"text":""}'
+        custom-model-data: 7781525
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: DAMAGE_TAKEN:1;DAMAGE_DEALT:0.75
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_hermes:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-adrenaline>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          custom-model-data: 7781528
+          attribute-modifiers:
+            GENERIC_MOVEMENT_SPEED:
+              - ==: org.bukkit.attribute.AttributeModifier
+                amount: 0.1
+                name: generic.movement_speed
+                slot: CHEST
+                uuid: 9228504e-3140-4b88-9af8-97597fd20e76
+                operation: 1
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_attributes: GENERIC_MOVEMENT_SPEED:0.1:ADD_SCALAR
+            valhallatrinkets:trinket_id: 1i
+            valhallammo:valhalla_default_attributes: GENERIC_MOVEMENT_SPEED:0.1:ADD_SCALAR
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-hermes>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+        custom-model-data: 7781529
+        attribute-modifiers:
+          GENERIC_MOVEMENT_SPEED:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 0.3
+              name: generic.movement_speed
+              slot: CHEST
+              uuid: 9228504e-3140-4b88-9af8-97597fd20e76
+              operation: 1
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_attributes: GENERIC_MOVEMENT_SPEED:0.3:ADD_SCALAR
+          valhallatrinkets:trinket_id: 1i
+          valhallammo:valhalla_default_attributes: GENERIC_MOVEMENT_SPEED:0.3:ADD_SCALAR
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_erinle:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-amulet-of-vitality>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          custom-model-data: 7781530
+          attribute-modifiers:
+            GENERIC_MAX_HEALTH:
+              - ==: org.bukkit.attribute.AttributeModifier
+                amount: 4.0
+                name: generic.max_health
+                slot: CHEST
+                uuid: 037d16e1-5a40-4147-8d9b-c76f846c7e42
+                operation: 0
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_attributes: GENERIC_MAX_HEALTH:4.0:ADD_NUMBER
+            valhallatrinkets:trinket_id: 1i
+            valhallammo:valhalla_default_attributes: GENERIC_MAX_HEALTH:4.0:ADD_NUMBER
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-erinle>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+        custom-model-data: 7781531
+        attribute-modifiers:
+          GENERIC_MAX_HEALTH:
+            - ==: org.bukkit.attribute.AttributeModifier
+              amount: 10.0
+              name: generic.max_health
+              slot: CHEST
+              uuid: 037d16e1-5a40-4147-8d9b-c76f846c7e42
+              operation: 0
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_attributes: GENERIC_MAX_HEALTH:10.0:ADD_NUMBER
+          valhallatrinkets:trinket_id: 1i
+          valhallammo:valhalla_default_attributes: GENERIC_MAX_HEALTH:10.0:ADD_NUMBER
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false
+  craft_trinket_artemis:
+    ingredients:
+      '0':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+      '1':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-magic-quiver>"}],"text":""}'
+          lore:
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_damage> +10%"}],"text":""}'
+            - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_ammo_save> +10%"}],"text":""}'
+          custom-model-data: 7781522
+          PublicBukkitValues:
+            valhallammo:valhalla_custom_enchantments: ARCHERY_DAMAGE:0.1;ARCHERY_AMMO_SAVE:0.1
+            valhallatrinkets:trinket_id: 1i
+      '2':
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: NETHER_STAR
+    result:
+      ==: org.bukkit.inventory.ItemStack
+      v: 2586
+      type: ENCHANTED_BOOK
+      meta:
+        ==: ItemMeta
+        meta-type: ENCHANTED
+        display-name: '{"extra":[{"italic":false,"color":"light_purple","text":"<lang.trinket-artemis>"}],"text":""}'
+        lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_gray","text":"Necklace"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_damage> +25%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_ammo_save> +25%"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"<lang.enchantment_archery_accuracy> +5.0"}],"text":""}'
+        custom-model-data: 7781523
+        PublicBukkitValues:
+          valhallammo:valhalla_custom_enchantments: ARCHERY_DAMAGE:0.25;ARCHERY_AMMO_SAVE:0.25;ARCHERY_ACCURACY:5
+          valhallatrinkets:trinket_id: 1i
+    require_custom_tools: false
+    use_meta: true
+    unlocked_for_everyone: true
+    improve_center_item: false
+    shapeless: false
+    tool_id: -1
+    tool_requirement_type: 0
+    allow_material_variations: false

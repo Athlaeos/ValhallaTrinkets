@@ -51,16 +51,25 @@ public class Utils {
         return Utils.simpleChat(StringEscapeUtils.unescapeJava(matcher.appendTail(buffer).toString()));
     }
 
-    public static String serializeItemStack(ItemStack itemStack) {
+    public static String serializeItemStack(ItemStack itemStack){
+        return ItemSerializer.toBase64(itemStack);
+    }
+
+    public static ItemStack deserializeItemStack(String base64){
+        if (base64.startsWith("i:")) return deserializeItemStackYaml(base64);
+        return ItemSerializer.itemStackFromBase64(base64);
+    }
+
+    public static String serializeItemStackYaml(ItemStack itemStack) {
         YamlConfiguration config = new YamlConfiguration();
         config.set("i", itemStack);
         return config.saveToString();
     }
 
-    public static ItemStack deserializeItemStack(String json){
+    public static ItemStack deserializeItemStackYaml(String yml){
         YamlConfiguration config = new YamlConfiguration();
         try {
-            config.loadFromString(json);
+            config.loadFromString(yml);
         } catch (Exception e) {
             e.printStackTrace();
             return null;

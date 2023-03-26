@@ -14,7 +14,7 @@ import java.util.List;
 
 public class TrinketTypeRequireModifier extends DynamicItemModifier {
     public TrinketTypeRequireModifier() {
-        super("trinket_type_set", 0, ModifierPriority.NEUTRAL);
+        super("trinket_type_require", 0, ModifierPriority.NEUTRAL);
 
         this.category = ModifierCategory.ITEM_CONDITIONALS;
 
@@ -31,8 +31,8 @@ public class TrinketTypeRequireModifier extends DynamicItemModifier {
     }
 
     @Override
-    public ItemStack processItem(Player player, ItemStack itemStack) {
-        TrinketType type = TrinketsManager.getInstance().getTrinketTypes().get((int) strength);
+    public ItemStack processItem(Player player, ItemStack itemStack, int amount) {
+        TrinketType type = TrinketsManager.getInstance().getTrinketType(itemStack);
         if ((type == null && (int) strength < 0) || (type != null && type.getId() == (int) strength)){
             return itemStack;
         }
