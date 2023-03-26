@@ -4,6 +4,7 @@ import me.athlaeos.valhallammo.ValhallaMMO;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import me.athlaeos.valhallatrinkets.menus.Menu;
 import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtility;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -11,6 +12,7 @@ import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.Map;
 
@@ -55,6 +57,15 @@ public class TrinketMenu extends Menu {
                         // clicked a valid item slot
                         if (!Utils.isItemEmptyOrNull(e.getCursor()) && !emptyTrinketSlot){
                             // neither items are null
+
+                            ItemMeta meta = e.getCurrentItem().getItemMeta();
+                            if (meta != null){
+                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
+                                    e.setCancelled(true);
+                                    return;
+                                }
+                            }
+
                             TrinketType cursorType = TrinketsManager.getInstance().getTrinketType(e.getCursor());
                             if (cursorType != null){
                                 if (cursorType.getValidSlots().contains(e.getSlot())){
@@ -75,6 +86,15 @@ public class TrinketMenu extends Menu {
                                 }
                             }
                         } else if (Utils.isItemEmptyOrNull(e.getCursor()) && !emptyTrinketSlot){
+
+                            ItemMeta meta = e.getCurrentItem().getItemMeta();
+                            if (meta != null){
+                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
+                                    e.setCancelled(true);
+                                    return;
+                                }
+                            }
+
                             // clicking on trinket with empty cursor
                             TrinketsManager.getInstance().removeTrinket(who, e.getSlot());
                             e.setCancelled(false);
@@ -114,6 +134,15 @@ public class TrinketMenu extends Menu {
                     } else if (clickedInventory.getHolder() instanceof TrinketMenu){
                         ItemStack clickedItem = e.getCurrentItem();
                         if (!Utils.isItemEmptyOrNull(clickedItem) && playerMenuUtility.getOwner().getInventory().firstEmpty() >= 0){
+
+                            ItemMeta meta = clickedItem.getItemMeta();
+                            if (meta != null){
+                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
+                                    e.setCancelled(true);
+                                    return;
+                                }
+                            }
+
                             TrinketType type = TrinketsManager.getInstance().getTrinketType(clickedItem);
                             if (type != null){
                                 e.setCancelled(false);
