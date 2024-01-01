@@ -2,6 +2,7 @@ package me.athlaeos.valhallatrinkets;
 
 import me.athlaeos.valhallammo.ValhallaMMO;
 import me.athlaeos.valhallammo.commands.ValhallaCommandManager;
+import me.athlaeos.valhallammo.crafting.DynamicItemModifierManager;
 import me.athlaeos.valhallatrinkets.commands.TrinketsCommand;
 import me.athlaeos.valhallatrinkets.commands.ValhallaLoadDefaultTrinketRecipesCommand;
 import me.athlaeos.valhallatrinkets.config.ConfigUpdater;
@@ -28,7 +29,14 @@ public final class ValhallaTrinkets extends JavaPlugin {
         valhallaHooked = Arrays.stream(getServer().getPluginManager().getPlugins()).anyMatch(p -> p.getName().equals("ValhallaMMO"));
         if (valhallaHooked){
             this.getLogger().info("ValhallaMMO hooked! Adding a bunch of cool stuff. Use /val setuptrinkets to load in its custom recipes (probably only use it once tho)");
-            getServer().getPluginManager().registerEvents(new ValhallaLoadModifiersListener(), this);
+            try {
+                DynamicItemModifierManager.modifiersToRegister.add(new TrinketTypeSetModifier());
+                DynamicItemModifierManager.modifiersToRegister.add(new TrinketTypeRequireModifier());
+                DynamicItemModifierManager.modifiersToRegister.add(new SetUnstackableModifier());
+            } catch (Exception ignored){
+                // Valhalla is not up to date enough yet to have this feature and so another, less reliable implementation is attempted
+                getServer().getPluginManager().registerEvents(new ValhallaLoadModifiersListener(), this);
+            }
             this.getServer().getScheduler().runTaskLater(this, () -> {
                 ValhallaMMO.setTrinketsHooked(true);
                 ValhallaCommandManager.getInstance().getCommands().put("setuptrinkets", new ValhallaLoadDefaultTrinketRecipesCommand());
@@ -53,7 +61,7 @@ public final class ValhallaTrinkets extends JavaPlugin {
     /**
      * You'll implement your own way to open the trinket menu? You don't want clicking outside the inventory to open the trinket menu?
      * Allright buddy, no problem
-     * @param illHandleTrinketMenu will you handle the opening of the trinket menu? Cool
+     * @param illHandleTrinketMenu will you handle the opening of the trinket menu?
      */
     public static void IllHandleTrinketMenu(boolean illHandleTrinketMenu) {
         ValhallaTrinkets.illHandleTrinketMenu = illHandleTrinketMenu;

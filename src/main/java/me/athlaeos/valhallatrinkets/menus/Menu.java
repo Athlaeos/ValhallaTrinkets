@@ -1,6 +1,7 @@
 package me.athlaeos.valhallatrinkets.menus;
 
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.inventory.Inventory;
@@ -30,6 +31,14 @@ public abstract class Menu implements InventoryHolder {
         this.setMenuItems();
 
         playerMenuUtility.getOwner().openInventory(inventory);
+    }
+
+    public void open(Player viewer){
+        inventory = Bukkit.createInventory(this, getSlots(), getMenuName());
+
+        this.setMenuItems();
+
+        viewer.openInventory(inventory);
     }
 
     @Override

@@ -1,9 +1,8 @@
-package me.athlaeos.valhallatrinkets;
+package me.athlaeos.valhallatrinkets.menus;
 
 import me.athlaeos.valhallammo.ValhallaMMO;
+import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
-import me.athlaeos.valhallatrinkets.menus.Menu;
-import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtility;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -73,12 +72,12 @@ public class TrinketMenu extends Menu {
                                         e.setCancelled(true);
                                         InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
                                         ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
-                                                TrinketsManager.getInstance().addTrinketUnsafe(who, inventory.getItem(e.getSlot()), e.getSlot());
+                                                TrinketsManager.getInstance().addTrinketUnsafe(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
                                                 setMenuItems();
                                                 }, 1L);
                                     } else {
                                         e.setCancelled(false);
-                                        TrinketsManager.getInstance().addTrinketUnsafe(who, e.getCursor(), e.getSlot());
+                                        TrinketsManager.getInstance().addTrinketUnsafe(playerMenuUtility.getOwner(), e.getCursor(), e.getSlot());
                                         ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
                                     }
                                     return;
@@ -96,7 +95,7 @@ public class TrinketMenu extends Menu {
                             }
 
                             // clicking on trinket with empty cursor
-                            TrinketsManager.getInstance().removeTrinket(who, e.getSlot());
+                            TrinketsManager.getInstance().removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
                             e.setCancelled(false);
                             ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
                             return;
@@ -107,7 +106,7 @@ public class TrinketMenu extends Menu {
                             if (cursorType != null){
                                 if (cursorType.getValidSlots().contains(e.getSlot())){
                                     inventory.setItem(e.getSlot(), null);
-                                    TrinketsManager.getInstance().addTrinket(who, e.getCursor(), e.getSlot());
+                                    TrinketsManager.getInstance().addTrinket(playerMenuUtility.getOwner(), e.getCursor(), e.getSlot());
                                     InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
                                 }
                             }
@@ -124,7 +123,7 @@ public class TrinketMenu extends Menu {
                                     if (Utils.isItemEmptyOrNull(existingItem) || TrinketsManager.getInstance().getTrinketType(existingItem) == null){
                                         e.setCancelled(true);
                                         e.getView().setItem(i, clickedItem);
-                                        TrinketsManager.getInstance().addTrinket(who, clickedItem, i);
+                                        TrinketsManager.getInstance().addTrinket(playerMenuUtility.getOwner(), clickedItem, i);
                                         e.setCurrentItem(null);
                                         break;
                                     }
@@ -146,7 +145,7 @@ public class TrinketMenu extends Menu {
                             TrinketType type = TrinketsManager.getInstance().getTrinketType(clickedItem);
                             if (type != null){
                                 e.setCancelled(false);
-                                TrinketsManager.getInstance().removeTrinket(who, e.getSlot());
+                                TrinketsManager.getInstance().removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
                                 ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
                                 return;
                             }

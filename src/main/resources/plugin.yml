@@ -17,3 +17,6 @@ permissions:
   trinkets.setup:
     default: op
     description: Allows the user to load the default ValhallaTrinkets recipes into ValhallaMMO
+  trinkets.viewothers:
+    default: op
+    description: Allows the user to view and modify the trinkets of others

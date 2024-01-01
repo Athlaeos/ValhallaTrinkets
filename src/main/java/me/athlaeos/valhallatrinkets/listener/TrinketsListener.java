@@ -3,6 +3,7 @@ package me.athlaeos.valhallatrinkets.listener;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
+import me.athlaeos.valhallatrinkets.menus.TrinketMenu;
 import org.bukkit.GameRule;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;

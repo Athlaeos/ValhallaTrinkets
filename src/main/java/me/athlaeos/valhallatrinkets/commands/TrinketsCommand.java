@@ -1,6 +1,7 @@
 package me.athlaeos.valhallatrinkets.commands;
 
-import me.athlaeos.valhallatrinkets.TrinketMenu;
+import me.athlaeos.valhallatrinkets.Utils;
+import me.athlaeos.valhallatrinkets.menus.TrinketMenu;
 import me.athlaeos.valhallatrinkets.ValhallaTrinkets;
 import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
 import org.bukkit.command.Command;
@@ -19,7 +20,15 @@ public class TrinketsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (sender instanceof Player){
-            new TrinketMenu(PlayerMenuUtilManager.getInstance().getPlayerMenuUtility((Player) sender)).open();
+            Player target = (Player) sender;
+            if (args.length > 0 && sender.hasPermission("trinkets.viewothers")){
+                target = ValhallaTrinkets.getPlugin().getServer().getPlayer(args[0]);
+                if (target == null){
+                    sender.sendMessage(Utils.chat("&cPlayer not online"));
+                    return true;
+                }
+            }
+            new TrinketMenu(PlayerMenuUtilManager.getInstance().getPlayerMenuUtility(target)).open((Player) sender);
         }
         return true;
     }

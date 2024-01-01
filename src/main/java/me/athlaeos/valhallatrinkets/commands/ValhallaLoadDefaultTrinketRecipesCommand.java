@@ -3,17 +3,12 @@ package me.athlaeos.valhallatrinkets.commands;
 import me.athlaeos.valhallammo.commands.Command;
 import me.athlaeos.valhallammo.crafting.recipetypes.DynamicCraftingTableRecipe;
 import me.athlaeos.valhallammo.managers.CustomRecipeManager;
-import me.athlaeos.valhallammo.managers.TranslationManager;
-import me.athlaeos.valhallammo.managers.TutorialBook;
 import me.athlaeos.valhallatrinkets.Utils;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.List;
 
 public class ValhallaLoadDefaultTrinketRecipesCommand implements Command {
