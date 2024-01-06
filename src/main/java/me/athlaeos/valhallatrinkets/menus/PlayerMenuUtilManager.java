@@ -5,19 +5,7 @@ import org.bukkit.entity.Player;
 import java.util.HashMap;
 
 public class PlayerMenuUtilManager {
-    private HashMap<Player, PlayerMenuUtility> playerMenuMap = new HashMap<>();
-    private static PlayerMenuUtilManager manager = null;
-
-    public PlayerMenuUtilManager(){
-
-    }
-
-    public static PlayerMenuUtilManager getInstance(){
-        if (manager == null){
-            manager = new PlayerMenuUtilManager();
-        }
-        return manager;
-    }
+    private static HashMap<Player, PlayerMenuUtility> playerMenuMap = new HashMap<>();
 
     /**
      * Returns a PlayerMenuUtility object belonging to the given player, or a new blank one if none exist.
@@ -25,7 +13,7 @@ public class PlayerMenuUtilManager {
      *
      * @return A PlayerMenuUtility object belonging to a player, or a new blank one if none were found.
      */
-    public PlayerMenuUtility getPlayerMenuUtility(Player p){
+    public static PlayerMenuUtility getPlayerMenuUtility(Player p){
         if (!playerMenuMap.containsKey(p)){
             PlayerMenuUtility utility = new PlayerMenuUtility(p);
             playerMenuMap.put(p, utility);

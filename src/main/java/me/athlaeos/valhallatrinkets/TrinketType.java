@@ -1,39 +1,20 @@
 package me.athlaeos.valhallatrinkets;
 
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-
-import java.util.Collection;
-import java.util.List;
-
 public class TrinketType {
 
     private final int id;
-    private final String displayName;
-    private final Collection<Integer> validSlots;
-    private final ItemStack placeholderItem;
+    private final String loreTag;
 
-    public TrinketType(int id, String displayName, Collection<Integer> validSlots, Material type, int data, String itemDisplayName, List<String> lore){
+    public TrinketType(int id, String displayName){
         this.id = id;
-        this.displayName = displayName;
-        this.validSlots = validSlots;
-
-        placeholderItem = Utils.createSimpleItem(type, data, itemDisplayName, lore);
+        this.loreTag = displayName;
     }
 
-    public int getId() {
+    public int getID() {
         return id;
     }
 
-    public String getDisplayName() {
-        return displayName;
-    }
-
-    public Collection<Integer> getValidSlots() {
-        return validSlots;
-    }
-
-    public ItemStack getPlaceholderItem() {
-        return placeholderItem;
+    public String getLoreTag() {
+        return loreTag;
     }
 }

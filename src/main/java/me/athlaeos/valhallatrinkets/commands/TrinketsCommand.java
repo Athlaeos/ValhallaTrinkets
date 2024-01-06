@@ -13,9 +13,8 @@ import org.bukkit.entity.Player;
 public class TrinketsCommand implements CommandExecutor {
     public TrinketsCommand(){
         PluginCommand command = ValhallaTrinkets.getPlugin().getCommand("trinkets");
-        if (command != null){
-            command.setExecutor(this);
-        }
+        if (command != null) command.setExecutor(this);
+
     }
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -28,7 +27,7 @@ public class TrinketsCommand implements CommandExecutor {
                     return true;
                 }
             }
-            new TrinketMenu(PlayerMenuUtilManager.getInstance().getPlayerMenuUtility(target)).open((Player) sender);
+            new TrinketMenu(PlayerMenuUtilManager.getPlayerMenuUtility(target)).open((Player) sender);
         }
         return true;
     }

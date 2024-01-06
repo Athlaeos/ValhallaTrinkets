@@ -1,66 +1,53 @@
 package me.athlaeos.valhallatrinkets;
 
-import me.athlaeos.valhallammo.ValhallaMMO;
-import me.athlaeos.valhallammo.commands.ValhallaCommandManager;
-import me.athlaeos.valhallammo.crafting.DynamicItemModifierManager;
+import me.athlaeos.valhallatrinkets.commands.EditTrinketsCommand;
 import me.athlaeos.valhallatrinkets.commands.TrinketsCommand;
-import me.athlaeos.valhallatrinkets.commands.ValhallaLoadDefaultTrinketRecipesCommand;
+import me.athlaeos.valhallatrinkets.valhallammo.*;
 import me.athlaeos.valhallatrinkets.config.ConfigUpdater;
 import me.athlaeos.valhallatrinkets.listener.MenuListener;
 import me.athlaeos.valhallatrinkets.listener.TrinketsListener;
-import me.athlaeos.valhallatrinkets.listener.ValhallaLoadModifiersListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class ValhallaTrinkets extends JavaPlugin {
     private static ValhallaTrinkets plugin = null;
     private static boolean valhallaHooked = false;
     private static boolean illHandleTrinketMenu = false;
+    private static final Map<Class<? extends PluginHook>, PluginHook> activeHooks = new HashMap<>();
+
+    @Override
+    public void onLoad(){
+        registerHook(new ValhallaHook());
+    }
 
     @Override
     public void onEnable() {
         plugin = this;
         saveAndUpdateConfig("config.yml");
-        TrinketsManager.getInstance().loadTrinketTypes();
+        TrinketsManager.loadTrinketTypes();
         valhallaHooked = Arrays.stream(getServer().getPluginManager().getPlugins()).anyMatch(p -> p.getName().equals("ValhallaMMO"));
-        if (valhallaHooked){
-            this.getLogger().info("ValhallaMMO hooked! Adding a bunch of cool stuff. Use /val setuptrinkets to load in its custom recipes (probably only use it once tho)");
-            try {
-                DynamicItemModifierManager.modifiersToRegister.add(new TrinketTypeSetModifier());
-                DynamicItemModifierManager.modifiersToRegister.add(new TrinketTypeRequireModifier());
-                DynamicItemModifierManager.modifiersToRegister.add(new SetUnstackableModifier());
-            } catch (Exception ignored){
-                // Valhalla is not up to date enough yet to have this feature and so another, less reliable implementation is attempted
-                getServer().getPluginManager().registerEvents(new ValhallaLoadModifiersListener(), this);
-            }
-            this.getServer().getScheduler().runTaskLater(this, () -> {
-                ValhallaMMO.setTrinketsHooked(true);
-                ValhallaCommandManager.getInstance().getCommands().put("setuptrinkets", new ValhallaLoadDefaultTrinketRecipesCommand());
-                saveConfig("valhallatrinkets.yml");
-            }, 20L);
-        } else {
-            this.getLogger().info("ValhallaMMO was not found");
-        }
+        for (PluginHook hook : activeHooks.values()) hook.whenPresent();
 
         new TrinketsCommand();
+        new EditTrinketsCommand();
         getServer().getPluginManager().registerEvents(new MenuListener(), this);
         getServer().getPluginManager().registerEvents(new TrinketsListener(), this);
-        // Plugin startup logic
-
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+
     }
 
     /**
      * You'll implement your own way to open the trinket menu? You don't want clicking outside the inventory to open the trinket menu?
-     * Allright buddy, no problem
+     * Alright buddy, no problem
      * @param illHandleTrinketMenu will you handle the opening of the trinket menu?
      */
     public static void IllHandleTrinketMenu(boolean illHandleTrinketMenu) {
@@ -76,7 +63,7 @@ public final class ValhallaTrinkets extends JavaPlugin {
     }
 
     private void saveAndUpdateConfig(String config){
-        saveConfig(config);
+        save(config);
         updateConfig(config);
     }
 
@@ -84,7 +71,7 @@ public final class ValhallaTrinkets extends JavaPlugin {
         return valhallaHooked;
     }
 
-    public void saveConfig(String name){
+    public void save(String name){
         File config = new File(this.getDataFolder(), name);
         if (!config.exists()){
             this.saveResource(name, false);
@@ -98,5 +85,12 @@ public final class ValhallaTrinkets extends JavaPlugin {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private static void registerHook(PluginHook hook){
+        if (hook.isPresent()) activeHooks.put(hook.getClass(), hook);
+    }
+    public static boolean isHooked(Class<? extends PluginHook> hook){
+        return activeHooks.containsKey(hook);
     }
 }

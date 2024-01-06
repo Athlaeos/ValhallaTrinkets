@@ -1,5 +1,6 @@
 package me.athlaeos.valhallatrinkets;
 
+import me.athlaeos.valhallammo.playerstats.EntityCache;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -12,23 +13,18 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class TrinketsManager {
-    private static TrinketsManager manager = null;
-    private static final NamespacedKey trinketIDKey = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_id");
-    private static final NamespacedKey trinketInventoryKey = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_inventory");
-    private static final NamespacedKey unstackableKey = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_unstackable");
+    private static final NamespacedKey ID_KEY = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_id");
+    private static final NamespacedKey INVENTORY_KEY = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_inventory");
+    private static final NamespacedKey UNSTACKABLE_KEY = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_unstackable");
 
-    private final Map<Integer, TrinketType> trinketTypes = new HashMap<>();
-    private final Collection<Integer> validSlots = new HashSet<>();
-    private final ItemStack fillerItem;
+    private static final Map<Integer, TrinketSlot> trinketSlots = new HashMap<>(); // key corresponds to placement in menu
+    private static final Map<Integer, TrinketType> trinketTypes = new HashMap<>();
+    private static final ItemStack filler;
 
-    public static TrinketsManager getInstance(){
-        if (manager == null) manager = new TrinketsManager();
-        return manager;
-    }
-
-    public TrinketsManager(){
+    static {
         YamlConfiguration config = ConfigManager.getInstance().getConfig("config.yml").get();
         String type = config.getString("filler_item.type");
         ItemStack fillerItem = null;
@@ -42,24 +38,28 @@ public class TrinketsManager {
             ValhallaTrinkets.getPlugin().getServer().getLogger().warning("filler item type " + type + " is not valid");
         }
 
-        this.fillerItem = fillerItem;
+        filler = fillerItem;
     }
 
-    public TrinketType getTrinketType(ItemStack i){
-        if (i == null) return null;
-        ItemMeta meta = i.getItemMeta();
-        if (meta == null) return null;
-        if (meta.getPersistentDataContainer().has(trinketIDKey, PersistentDataType.INTEGER)) {
-            int value = meta.getPersistentDataContainer().get(trinketIDKey, PersistentDataType.INTEGER);
-            return trinketTypes.get(value);
-        }
-        return null;
+    /**
+     * Fetches the trinket's trinket type
+     * @param meta the item's meta
+     * @return the item's trinket type, or null if it has none
+     */
+    public static TrinketType getTrinketType(ItemMeta meta){
+        return trinketTypes.get(meta.getPersistentDataContainer().getOrDefault(ID_KEY, PersistentDataType.INTEGER, -1));
     }
 
-    public Map<Integer, ItemStack> getTrinketInventory(Player p){
-        Map<Integer, ItemStack> inventory = new HashMap<>();
-        if (p.getPersistentDataContainer().has(trinketInventoryKey, PersistentDataType.STRING)){
-            String value = p.getPersistentDataContainer().get(trinketInventoryKey, PersistentDataType.STRING);
+    /**
+     * Fetches the player's trinket inventory, returns it as a map where the key represents the inventory slot the trinket is present in
+     * and the value representing the actual trinket.
+     * @param p the player to get their trinket inventory from
+     * @return the trinket inventory
+     */
+    public static Map<Integer, TrinketItem> getTrinketInventory(Player p){
+        Map<Integer, TrinketItem> inventory = new HashMap<>();
+        if (p.getPersistentDataContainer().has(INVENTORY_KEY, PersistentDataType.STRING)){
+            String value = p.getPersistentDataContainer().get(INVENTORY_KEY, PersistentDataType.STRING);
             if (value == null) return inventory;
             String[] items = value.split("<itemsplitter>");
             for (String itemSlot : items){
@@ -69,7 +69,7 @@ public class TrinketsManager {
                         int s = Integer.parseInt(slot[0]);
                         String item = slot[1];
                         ItemStack i = Utils.deserializeItemStack(item);
-                        inventory.put(s, i);
+                        inventory.put(s, new TrinketItem(i, trinketSlots.get(s)));
                     } catch (IllegalArgumentException ignored){
                         ValhallaTrinkets.getPlugin().getServer().getLogger().severe("Could not fetch one of the items in " + p.getName() + "'s Trinket Inventory!");
                     }
@@ -79,14 +79,74 @@ public class TrinketsManager {
         return inventory;
     }
 
-    public void setTrinketInventory(Player p, Map<Integer, ItemStack> inventory){
-        Collection<String> stringElements = new HashSet<>();
-        for (Integer slot : inventory.keySet()){
-            ItemStack item = inventory.get(slot);
-            String element = slot + "<slotsplitter>" + Utils.serializeItemStack(item);
-            stringElements.add(element);
+    /**
+     * Returns the first available trinket slot from the given inventory for the given trinket type, if any. Also takes
+     * into consideration any permissions that might be required for that slot to be used.
+     * @param p the owner of the given trinket inventory
+     * @param trinketInventory the player's trinket inventory
+     * @param item the trinket of which to check the first slot in which it fits
+     * @return the trinket slot the given trinket can fit in, or null if none are available
+     */
+    public static TrinketSlot getFirstAvailableTrinketSlot(Player p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item){
+        for (Integer s : trinketSlots.keySet()){
+            TrinketSlot slot = trinketSlots.get(s);
+            if (canFitTrinketSlot(p, trinketInventory, item, s)) return slot;
         }
-        p.getPersistentDataContainer().set(trinketInventoryKey, PersistentDataType.STRING, String.join("<itemsplitter>", stringElements));
+        return null;
+    }
+
+    /**
+     * Checks if the given trinket type fits into the given slot in the given trinket inventory belonging to the given player.
+     * @param p the owner of the trinket inventory
+     * @param trinketInventory the trinket inventory
+     * @param item the type of trinket to check if it fits the slot
+     * @param slot the slot in which to try and see if the trinket fits in it
+     * @return true if it fits, false if not
+     */
+    public static boolean canFitTrinketSlot(Player p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item, int slot){
+        if (item.getType() == null) return false;
+        if (item.getID() != null){
+            // if the item has an ID and any of the trinket items match in ID where either are marked unique, it cannot fit
+            for (TrinketItem i : trinketInventory.values()){
+                if (i.getID() == null) continue;
+                if ((i.isUnique() || item.isUnique()) && i.getID().intValue() == item.getID().intValue()) {
+                    System.out.println("item is unique and is already worn");
+                    return false;
+                }
+            }
+        }
+        TrinketSlot s = trinketSlots.get(slot);
+        if (s == null) {
+            System.out.println("no trinket slot for " + slot);
+            return false;
+        }
+        if (s.getPermissionRequired() != null && !p.hasPermission(s.getPermissionRequired())) return false;
+        if (!s.getValidTypes().contains(item.getType().getID())) {
+            System.out.println("valid types for " + s.getSlot() + " doesnt contain " + item.getType().getID() + ", " + s.getValidTypes().stream().map(String::valueOf).collect(Collectors.joining(", ")));
+            return false;
+        }
+        return trinketInventory.get(slot) == null;
+    }
+
+    /**
+     * Sets the player's trinket inventory, and resets the trinket cache.
+     * @param p the player to set their trinket inventory to
+     * @param inventory the trinket inventory to set to the player
+     */
+    public static void setTrinketInventory(Player p, Map<Integer, TrinketItem> inventory){
+        if (inventory == null || inventory.isEmpty()){
+            p.getPersistentDataContainer().remove(INVENTORY_KEY);
+        } else {
+            Collection<String> stringElements = new HashSet<>();
+            for (Integer slot : inventory.keySet()){
+                TrinketItem item = inventory.get(slot);
+                String element = slot + "<slotsplitter>" + Utils.serializeItemStack(item.getItem());
+                stringElements.add(element);
+            }
+            p.getPersistentDataContainer().set(INVENTORY_KEY, PersistentDataType.STRING, String.join("<itemsplitter>", stringElements));
+        }
+        TrinketCache.reset(p);
+        if (ValhallaTrinkets.isValhallaHooked()) EntityCache.resetEquipment(p);
     }
 
     /**
@@ -96,9 +156,9 @@ public class TrinketsManager {
      * @param i the trinket to add
      * @param slot the slot to add the trinket to
      */
-    public void addTrinketUnsafe(Player p, ItemStack i, int slot){
-        Map<Integer, ItemStack> currentInventory = getTrinketInventory(p);
-        currentInventory.put(slot, i);
+    public static void addTrinketUnsafe(Player p, ItemStack i, int slot){
+        Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
+        currentInventory.put(slot, new TrinketItem(i, trinketSlots.get(slot)));
         setTrinketInventory(p, currentInventory);
     }
 
@@ -109,10 +169,10 @@ public class TrinketsManager {
      * @param slot the slot to add the trinket to
      * @return true if the trinket was added, false if the trinket slot was already occupied
      */
-    public boolean addTrinket(Player p, ItemStack i, int slot){
-        Map<Integer, ItemStack> currentInventory = getTrinketInventory(p);
+    public static boolean addTrinket(Player p, ItemStack i, int slot){
+        Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
         if (currentInventory.containsKey(slot)) return false;
-        currentInventory.put(slot, i);
+        currentInventory.put(slot, new TrinketItem(i, trinketSlots.get(slot)));
         setTrinketInventory(p, currentInventory);
         return true;
     }
@@ -123,80 +183,95 @@ public class TrinketsManager {
      * @param slot the trinket slot to remove
      * @return true if a trinket was removed, false if the slot was empty
      */
-    public boolean removeTrinket(Player p, int slot){
-        Map<Integer, ItemStack> currentInventory = getTrinketInventory(p);
+    public static boolean removeTrinket(Player p, int slot){
+        Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
         if (!currentInventory.containsKey(slot)) return false;
         currentInventory.remove(slot);
         setTrinketInventory(p, currentInventory);
         return true;
     }
 
-    public void setType(ItemStack i, TrinketType type){
-        if (i == null) return;
-        ItemMeta meta = i.getItemMeta();
-        if (meta == null) return;
-        if (type == null){
-            meta.getPersistentDataContainer().remove(trinketIDKey);
-        } else {
-            meta.getPersistentDataContainer().set(trinketIDKey, PersistentDataType.INTEGER, type.getId());
-        }
-        i.setItemMeta(meta);
-        setTrinketTypeLore(i);
+    /**
+     * Sets the trinket type of the item
+     * @param meta the item's meta
+     * @param type the trinket type
+     */
+    public static void setType(ItemMeta meta, TrinketType type){
+        if (type == null) meta.getPersistentDataContainer().remove(ID_KEY);
+        else meta.getPersistentDataContainer().set(ID_KEY, PersistentDataType.INTEGER, type.getID());
+        setTrinketTypeLore(meta);
     }
 
-    public void setUnstackable(ItemStack i, boolean unstackable){
-        if (i == null) return;
-        ItemMeta meta = i.getItemMeta();
+    /**
+     * Applies a random UUID NBT tag to the item, effectively rendering it unstackable.
+     * @param meta the item's meta
+     * @param unstackable true if the item should be unstackable, false if it should become stackable again
+     */
+    public static void setUnstackable(ItemMeta meta, boolean unstackable){
         if (meta == null) return;
-        if (!unstackable){
-            meta.getPersistentDataContainer().remove(unstackableKey);
-        } else {
-            meta.getPersistentDataContainer().set(unstackableKey, PersistentDataType.STRING, UUID.randomUUID().toString());
-        }
-        i.setItemMeta(meta);
+        if (!unstackable) meta.getPersistentDataContainer().remove(UNSTACKABLE_KEY);
+        else meta.getPersistentDataContainer().set(UNSTACKABLE_KEY, PersistentDataType.STRING, UUID.randomUUID().toString());
     }
 
-    public void randomizeUUID(ItemStack i){
-        if (i == null) return;
-        ItemMeta meta = i.getItemMeta();
-        if (meta == null) return;
-        meta.getPersistentDataContainer().set(unstackableKey, PersistentDataType.STRING, UUID.randomUUID().toString());
-        i.setItemMeta(meta);
-    }
-
-    public void loadTrinketTypes(){
+    public static void loadTrinketTypes(){
         YamlConfiguration config = ConfigManager.getInstance().getConfig("config.yml").get();
         ConfigurationSection trinketsSection = config.getConfigurationSection("trinket_types");
         if (trinketsSection != null){
             for (String stringId : trinketsSection.getKeys(false)){
                 try {
                     int id = Integer.parseInt(stringId);
-                    String name = config.getString("trinket_types." + stringId + ".name");
-                    Collection<Integer> validSlots = new HashSet<>(config.getIntegerList("trinket_types." + stringId + ".valid_slots"));
-                    this.validSlots.addAll(validSlots);
-
-                    String type = config.getString("trinket_types." + stringId + ".placeholder.type");
-                    try {
-                        Material material = Material.valueOf(type);
-                        int data = config.getInt("trinket_types." + stringId + ".placeholder.data", -1);
-                        String displayName = config.getString("trinket_types." + stringId + ".placeholder.display_name");
-                        List<String> lore = config.getStringList("trinket_types." + stringId + ".placeholder.lore");
-                        trinketTypes.put(id, new TrinketType(id, name, validSlots, material, data, displayName, lore));
-                    } catch (IllegalArgumentException ignored){
-                        ValhallaTrinkets.getPlugin().getServer().getLogger().warning("filler item type " + type + " is not valid");
-                        return;
-                    }
+                    String name = config.getString("trinket_types." + stringId);
+                    trinketTypes.put(id, new TrinketType(id, name));
                 } catch (IllegalArgumentException ignored){
                     ValhallaTrinkets.getPlugin().getServer().getLogger().warning("invalid ID " + stringId + " given in trinket_types");
                 }
             }
         }
+        ConfigurationSection slotSection = config.getConfigurationSection("trinket_slots");
+        if (slotSection == null) return;
+        for (String stringSlot : slotSection.getKeys(false)){
+            int slot;
+            try {
+                slot = Integer.parseInt(stringSlot);
+                if (slot < 0) throw new IllegalArgumentException();
+            } catch (IllegalArgumentException ignored){
+                ValhallaTrinkets.getPlugin().getServer().getLogger().warning("Trinket slot " + stringSlot + " is not valid");
+                continue;
+            }
+            Collection<Integer> validTrinketTypes = new HashSet<>(config.getIntegerList("trinket_slots." + stringSlot + ".valid_trinkets"));
+            ItemStack unlockedIcon;
+            try {
+                Material type = Material.valueOf(config.getString("trinket_slots." + stringSlot + ".placeholder.type"));
+                int data = config.getInt("trinket_slots." + stringSlot + ".placeholder.data", -1);
+                String displayName = config.getString("trinket_slots." + stringSlot + ".placeholder.display_name");
+                List<String> lore = config.getStringList("trinket_slots." + stringSlot + ".placeholder.lore");
+                unlockedIcon = Utils.createSimpleItem(type, data, displayName, lore);
+            } catch (IllegalArgumentException ignored){
+                ValhallaTrinkets.getPlugin().getServer().getLogger().warning("Placeholder item type is not valid");
+                continue;
+            }
+            String permission = config.getString("trinket_slots." + stringSlot + ".permission");
+            ItemStack lockedIcon = null;
+            if (permission != null){
+                try {
+                    Material type = Material.valueOf(config.getString("trinket_slots." + stringSlot + ".locked.type"));
+                    int data = config.getInt("trinket_slots." + stringSlot + ".locked.data", -1);
+                    String displayName = config.getString("trinket_slots." + stringSlot + ".locked.display_name");
+                    List<String> lore = config.getStringList("trinket_slots." + stringSlot + ".locked.lore");
+                    lockedIcon = Utils.createSimpleItem(type, data, displayName, lore);
+                } catch (IllegalArgumentException ignored){
+                    ValhallaTrinkets.getPlugin().getServer().getLogger().warning("Locked item type is not valid");
+                    continue;
+                }
+            }
+            TrinketSlot trinketSlot = lockedIcon != null ?
+                    new TrinketSlot(slot, unlockedIcon, validTrinketTypes, permission, lockedIcon) :
+                    new TrinketSlot(slot, unlockedIcon, validTrinketTypes);
+            trinketSlots.put(trinketSlot.getSlot(), trinketSlot);
+        }
     }
 
-    public void setTrinketTypeLore(ItemStack i){
-        if (i == null) return;
-        ItemMeta meta = i.getItemMeta();
-        if (meta == null) return;
+    public static void setTrinketTypeLore(ItemMeta meta){
         List<String> lore = meta.getLore();
         if (lore == null) lore = new ArrayList<>();
         List<String> finalLore = new ArrayList<>();
@@ -204,27 +279,25 @@ public class TrinketsManager {
         loreLoop:
         for (String l : lore){
             for (TrinketType type : trinketTypes.values()){
-                if (l.contains(ChatColor.stripColor(Utils.chat(type.getDisplayName())))) continue loreLoop;
+                if (l.contains(ChatColor.stripColor(Utils.chat(type.getLoreTag())))) continue loreLoop;
             }
             finalLore.add(l);
         }
-        TrinketType type = getTrinketType(i);
-        if (type != null){
-            finalLore.add(Utils.chat(type.getDisplayName()));
-        }
+        TrinketType type = getTrinketType(meta);
+        if (type != null) finalLore.add(Utils.chat(type.getLoreTag()));
+
         meta.setLore(finalLore);
-        i.setItemMeta(meta);
     }
 
-    public Map<Integer, TrinketType> getTrinketTypes() {
+    public static Map<Integer, TrinketType> getTrinketTypes() {
         return trinketTypes;
     }
 
-    public ItemStack getFillerItem() {
-        return fillerItem;
+    public static ItemStack getFillerItem() {
+        return filler;
     }
 
-    public Collection<Integer> getValidSlots() {
-        return validSlots;
+    public static Map<Integer, TrinketSlot> getTrinketSlots() {
+        return trinketSlots;
     }
 }

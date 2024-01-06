@@ -35,64 +35,51 @@ public class TrinketsListener implements Listener {
     @EventHandler(priority = EventPriority.LOWEST)
     public void onPlayerDeath(PlayerDeathEvent e){
         if (!e.getKeepInventory() && dropTrinketsOnDeath){
-            e.getDrops().addAll(TrinketsManager.getInstance().getTrinketInventory(e.getEntity()).values().stream().filter(
+            e.getDrops().addAll(TrinketsManager.getTrinketInventory(e.getEntity()).values().stream().filter(
                     itemStack -> {
                         Boolean keepInventory = e.getEntity().getWorld().getGameRuleValue(GameRule.KEEP_INVENTORY);
                         if (keepInventory != null && keepInventory) return true;
-                        ItemMeta meta = itemStack.getItemMeta();
-                        if (meta != null){
-                            return !meta.hasEnchant(Enchantment.VANISHING_CURSE);
-                        }
+                        ItemMeta meta = itemStack.getMeta();
+                        if (meta != null) return !meta.hasEnchant(Enchantment.VANISHING_CURSE);
                         return true;
-                    }).collect(Collectors.toSet()));
-            TrinketsManager.getInstance().setTrinketInventory(e.getEntity(), new HashMap<>());
+                    }).map(TrinketItem::getItem).collect(Collectors.toSet()));
+            TrinketsManager.setTrinketInventory(e.getEntity(), new HashMap<>());
         }
     }
 
     @EventHandler
     public void onTrinketClick(PlayerInteractEvent e){
-        if ((e.useItemInHand() == Event.Result.ALLOW || e.useItemInHand() == Event.Result.DEFAULT) && (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) && e.getHand() == EquipmentSlot.HAND) {
+        if ((e.useItemInHand() == Event.Result.ALLOW || e.useItemInHand() == Event.Result.DEFAULT) &&
+                (e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK) && e.getHand() == EquipmentSlot.HAND) {
             ItemStack inHandItem = e.getItem();
-            if (!Utils.isItemEmptyOrNull(inHandItem)){
-                TrinketType type = TrinketsManager.getInstance().getTrinketType(inHandItem);
-                if (type != null){
-                    if (TrinketsManager.getInstance().getValidSlots().isEmpty()) {
-                        return;
-                    }
-                    if (!e.getPlayer().hasPermission("trinkets.allowtrinkets")) {
-                        return;
-                    }
-                    Map<Integer, ItemStack> trinketInventory = TrinketsManager.getInstance().getTrinketInventory(e.getPlayer());
-                    for (int i : type.getValidSlots()){
-                        ItemStack existingItem = trinketInventory.get(i);
-                        if (Utils.isItemEmptyOrNull(existingItem) || TrinketsManager.getInstance().getTrinketType(existingItem) == null){
-                            e.setCancelled(true);
-                            trinketInventory.put(i, inHandItem);
-                            TrinketsManager.getInstance().addTrinket(e.getPlayer(), inHandItem, i);
-                            e.getPlayer().getInventory().setItemInMainHand(null);
-                            break;
-                        }
-                    }
-                }
-            }
+            if (Utils.isEmpty(inHandItem) || !inHandItem.hasItemMeta()) return;
+            ItemMeta meta = inHandItem.getItemMeta();
+            if (meta == null) return;
+            if (TrinketsManager.getTrinketSlots().isEmpty() || !e.getPlayer().hasPermission("trinkets.allowtrinkets")) return;
+
+            TrinketItem item = new TrinketItem(inHandItem, null);
+
+            Map<Integer, TrinketItem> trinketInventory = TrinketCache.getOrCache(e.getPlayer());
+            TrinketSlot firstAvailable = TrinketsManager.getFirstAvailableTrinketSlot(e.getPlayer(), trinketInventory, item);
+            if (firstAvailable == null) return;
+            ItemStack trinketToPut = inHandItem.clone();
+            trinketToPut.setAmount(1);
+            e.setCancelled(true);
+            if (!TrinketsManager.addTrinket(e.getPlayer(), trinketToPut, firstAvailable.getSlot())) return;
+
+            if (inHandItem.getAmount() <= 1) e.getPlayer().getInventory().setItemInMainHand(null);
+            else inHandItem.setAmount(inHandItem.getAmount() - 1);
         }
     }
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
-        if (!e.isCancelled() && !ValhallaTrinkets.IllHandleTrinketMenu()){
-            if (e.getView().getBottomInventory() instanceof PlayerInventory && e.getView().getTopInventory() instanceof CraftingInventory){
-                if (TrinketsManager.getInstance().getValidSlots().isEmpty()) return;
-                if (!e.getWhoClicked().hasPermission("trinkets.allowtrinkets")) return;
-                if (!Utils.isItemEmptyOrNull(e.getCursor())) return;
-                if (((CraftingInventory) e.getView().getTopInventory()).getMatrix().length == 4) {
-                    if (e.getSlot() < 0) {
-                        if (e.getWhoClicked() instanceof Player){
-                            new TrinketMenu(PlayerMenuUtilManager.getInstance().getPlayerMenuUtility((Player) e.getWhoClicked())).open();
-                        }
-                    }
-                }
-            }
+        if (e.isCancelled() || ValhallaTrinkets.IllHandleTrinketMenu() || TrinketsManager.getTrinketSlots().isEmpty() ||
+                e.getSlot() >= 0 || !(e.getWhoClicked() instanceof Player) || !Utils.isEmpty(e.getCursor())) return;
+        if (e.getView().getBottomInventory() instanceof PlayerInventory && e.getView().getTopInventory() instanceof CraftingInventory){
+            if (!e.getWhoClicked().hasPermission("trinkets.allowtrinkets")) return;
+            if (((CraftingInventory) e.getView().getTopInventory()).getMatrix().length != 4) return;
+            new TrinketMenu(PlayerMenuUtilManager.getPlayerMenuUtility((Player) e.getWhoClicked())).open();
         }
     }
 }

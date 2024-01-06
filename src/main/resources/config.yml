@@ -1,68 +1,83 @@
-drop_trinkets_on_death: true
+drop_trinkets_on_death: true # trinkets will be preserved regardless of this option if the keepInventory gamerule is enabled
 
-trinket_menu_size: 9
-trinket_title: '&8Trinkets'
+trinket_menu_size: 9 # trinket menu size must be a multiple of 9 up until 54, Minecraft doesn't support smaller inventories
+trinket_title: "&8Accessories" # Title of trinkets menu
 
 filler_item: # Items to be placed in "locked off" slots, or unusable slots
-  type: GRAY_STAINED_GLASS_PANELOL
+  type: NONE_GRAY_STAINED_GLASS_PANE # yes, it's invalid by default as to keep the menu nice and clean
   data: -1
-  display_name: '&8'
+  display_name: "&8"
   lore: []
 
-trinket_types:
-  0: # This determines the trinket ID items should have to be considered this type of trinket
-    name: '&8Ring' # The display name as lore put on the item when a trinket type is set
-    valid_slots: [ 0, 2 ] # The item slots in the trinket menu where the
-    placeholder: # essentially the "icon" of the trinket type in the trinkets menu
+trinket_slots:
+  1: # represents the ID, as well as the slot the trinket will be placeable in within the menu
+    valid_trinkets: [ 7 ] # the list of valid trinkets that can be placed in this slot
+    placeholder: # essentially the "icon" of the icon in the trinkets menu when unlocked
       type: ROTTEN_FLESH
-      data: 5829310
-      display_name: '&8[Ring]'
-      lore: []
-  1:
-    name: '&8Necklace'
-    valid_slots: [ 4 ]
-    placeholder:
-      type: ROTTEN_FLESH
-      data: 5829311
-      display_name: '&8[Necklace]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
   2:
-    name: '&8Armband'
-    valid_slots: [ 6, 8 ]
+    valid_trinkets: [ 7 ]
     placeholder:
       type: ROTTEN_FLESH
-      data: 5829312
-      display_name: '&8[Armband]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
   3:
-    name: '&8Belt'
-    valid_slots: []
+    valid_trinkets: [ 7 ]
     placeholder:
       type: ROTTEN_FLESH
-      data: 5829313
-      display_name: '&8[Belt]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
   4:
-    name: '&8Mask'
-    valid_slots: []
+    valid_trinkets: [ 7 ]
     placeholder:
       type: ROTTEN_FLESH
-      data: 5829314
-      display_name: '&8[Mask]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
   5:
-    name: '&8Pin'
-    valid_slots: []
+    valid_trinkets: [ 7 ]
     placeholder:
       type: ROTTEN_FLESH
-      data: 5829315
-      display_name: '&8[Pin]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
   6:
-    name: '&8Circlet'
-    valid_slots: []
+    valid_trinkets: [ 7 ]
+    permission: "trinkets.1" # the permission required to be able to insert trinkets into this slot
     placeholder:
       type: ROTTEN_FLESH
-      data: 5829316
-      display_name: '&8[Circlet]'
+      data: 5829317
+      display_name: "&8[Accessory]"
       lore: []
+    locked: # the icon of the trinket slot if the player doesn't have the permission to access it
+      type: ROTTEN_FLESH
+      data: 5829320
+      display_name: "&c[Locked]"
+      lore: []
+  7:
+    valid_trinkets: [ 7 ]
+    permission: "trinkets.2"
+    placeholder:
+      type: ROTTEN_FLESH
+      data: 5829317
+      display_name: "&8[Accessory]"
+      lore: []
+    locked:
+      type: ROTTEN_FLESH
+      data: 5829320
+      display_name: "&c[Locked]"
+      lore: []
+
+trinket_types:
+  0: "<lang.trinket-tag-ring>" # The display name as lore put on the item when a trinket type is set
+  1: "<lang.trinket-tag-necklace>"
+  2: "<lang.trinket-tag-armband>"
+  3: "<lang.trinket-tag-belt>"
+  4: "<lang.trinket-tag-mask>"
+  5: "<lang.trinket-tag-pin>"
+  6: "<lang.trinket-tag-circlet>"
+  7: "<lang.trinket-tag-accessory>"

@@ -1,6 +1,7 @@
 package me.athlaeos.valhallatrinkets.menus;
 
 import me.athlaeos.valhallammo.ValhallaMMO;
+import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import org.bukkit.enchantments.Enchantment;
@@ -26,12 +27,12 @@ public class TrinketMenu extends Menu {
     @Override
     public String getMenuName() {
         switch ((size - 9) / 9){
-            case 5: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF546" : title)) : title);
-            case 4: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF545" : title)) : title);
-            case 3: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF544" : title)) : title);
-            case 2: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF543" : title)) : title);
-            case 1: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF542" : title)) : title);
-            default: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isPackEnabled() ? "&f\uF808\uF541" : title)) : title);
+            case 5: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF546" : title)) : title);
+            case 4: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF545" : title)) : title);
+            case 3: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF544" : title)) : title);
+            case 2: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF543" : title)) : title);
+            case 1: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF542" : title)) : title);
+            default: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF541" : title)) : title);
         }
     }
 
@@ -44,117 +45,104 @@ public class TrinketMenu extends Menu {
     public void handleMenu(InventoryClickEvent e) {
         e.setCancelled(true);
         Inventory clickedInventory = e.getClickedInventory();
-        if (clickedInventory != null){
-            if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.LEFT || e.getClick() == ClickType.RIGHT)) {
-                e.setCancelled(false);
-            }
-            if (e.getWhoClicked() instanceof Player){
-                Player who = (Player) e.getWhoClicked();
-                if ((e.isLeftClick() || e.isRightClick()) && !e.isShiftClick()){
-                    if (TrinketsManager.getInstance().getValidSlots().contains(e.getSlot()) && clickedInventory.getHolder() instanceof TrinketMenu){
-                        boolean emptyTrinketSlot = Utils.isItemEmptyOrNull(e.getCurrentItem()) || TrinketsManager.getInstance().getTrinketType(e.getCurrentItem()) == null;
-                        // clicked a valid item slot
-                        if (!Utils.isItemEmptyOrNull(e.getCursor()) && !emptyTrinketSlot){
-                            // neither items are null
-
-                            ItemMeta meta = e.getCurrentItem().getItemMeta();
-                            if (meta != null){
-                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
-                                    e.setCancelled(true);
-                                    return;
-                                }
-                            }
-
-                            TrinketType cursorType = TrinketsManager.getInstance().getTrinketType(e.getCursor());
-                            if (cursorType != null){
-                                if (cursorType.getValidSlots().contains(e.getSlot())){
-                                    if (e.getCursor().isSimilar(e.getCurrentItem())){
-                                        e.setCancelled(true);
-                                        InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
-                                        ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
-                                                TrinketsManager.getInstance().addTrinketUnsafe(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
-                                                setMenuItems();
-                                                }, 1L);
-                                    } else {
-                                        e.setCancelled(false);
-                                        TrinketsManager.getInstance().addTrinketUnsafe(playerMenuUtility.getOwner(), e.getCursor(), e.getSlot());
-                                        ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
-                                    }
-                                    return;
-//                                InventoryUtils.calculateClickedSlot(e);
-                                }
-                            }
-                        } else if (Utils.isItemEmptyOrNull(e.getCursor()) && !emptyTrinketSlot){
-
-                            ItemMeta meta = e.getCurrentItem().getItemMeta();
-                            if (meta != null){
-                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
-                                    e.setCancelled(true);
-                                    return;
-                                }
-                            }
-
-                            // clicking on trinket with empty cursor
-                            TrinketsManager.getInstance().removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
-                            e.setCancelled(false);
-                            ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
-                            return;
-                            //InventoryUtils.calculateClickedSlot(e);
-                        } else if (!Utils.isItemEmptyOrNull(e.getCursor()) && emptyTrinketSlot){
-                            // clicking on empty trinket slot
-                            TrinketType cursorType = TrinketsManager.getInstance().getTrinketType(e.getCursor());
-                            if (cursorType != null){
-                                if (cursorType.getValidSlots().contains(e.getSlot())){
-                                    inventory.setItem(e.getSlot(), null);
-                                    TrinketsManager.getInstance().addTrinket(playerMenuUtility.getOwner(), e.getCursor(), e.getSlot());
-                                    InventoryUtils.calculateClickedSlotOnlyAllow1Placed(e);
-                                }
-                            }
-                        }
+        if (clickedInventory == null || !(e.getWhoClicked() instanceof Player)) return;
+        if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.LEFT || e.getClick() == ClickType.RIGHT)) e.setCancelled(false);
+        Player who = (Player) e.getWhoClicked();
+        Map<Integer, TrinketItem> trinketInventory = TrinketCache.getOrCache(who);
+        ItemStack clicked = e.getCurrentItem();
+        ItemStack cursor = e.getCursor();
+        ItemMeta clickedMeta = ItemUtils.isEmpty(clicked) ? null : clicked.getItemMeta();
+        ItemMeta cursorMeta = ItemUtils.isEmpty(cursor) ? null : cursor.getItemMeta();
+        if ((e.isLeftClick() || e.isRightClick()) && !e.isShiftClick()){
+            if (TrinketsManager.getTrinketSlots().containsKey(e.getSlot()) && clickedInventory.getHolder() instanceof TrinketMenu){
+                // clicked a valid item slot
+                boolean emptyTrinketSlot = clickedMeta == null || TrinketsManager.getTrinketType(clickedMeta) == null;
+                if (cursorMeta != null && !emptyTrinketSlot){
+                    // neither items are null
+                    if (clickedMeta.hasEnchant(Enchantment.BINDING_CURSE)){
+                        e.setCancelled(true);
+                        return;
                     }
-                } else if ((e.isLeftClick() || e.isRightClick()) && e.isShiftClick()){
-                    if (clickedInventory instanceof PlayerInventory){
-                        ItemStack clickedItem = e.getCurrentItem();
-                        if (!Utils.isItemEmptyOrNull(clickedItem)){
-                            TrinketType type = TrinketsManager.getInstance().getTrinketType(clickedItem);
-                            if (type != null){
-                                for (int i : type.getValidSlots()){
-                                    ItemStack existingItem = e.getView().getItem(i);
-                                    if (Utils.isItemEmptyOrNull(existingItem) || TrinketsManager.getInstance().getTrinketType(existingItem) == null){
-                                        e.setCancelled(true);
-                                        e.getView().setItem(i, clickedItem);
-                                        TrinketsManager.getInstance().addTrinket(playerMenuUtility.getOwner(), clickedItem, i);
-                                        e.setCurrentItem(null);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    } else if (clickedInventory.getHolder() instanceof TrinketMenu){
-                        ItemStack clickedItem = e.getCurrentItem();
-                        if (!Utils.isItemEmptyOrNull(clickedItem) && playerMenuUtility.getOwner().getInventory().firstEmpty() >= 0){
-
-                            ItemMeta meta = clickedItem.getItemMeta();
-                            if (meta != null){
-                                if (meta.hasEnchant(Enchantment.BINDING_CURSE)) {
-                                    e.setCancelled(true);
-                                    return;
-                                }
-                            }
-
-                            TrinketType type = TrinketsManager.getInstance().getTrinketType(clickedItem);
-                            if (type != null){
-                                e.setCancelled(false);
-                                TrinketsManager.getInstance().removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
-                                ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
-                                return;
-                            }
-                        }
+                    TrinketItem item = new TrinketItem(cursor, null);
+                    if (item.getType() == null){
+                        e.setCancelled(true);
+                        return;
                     }
-                } else if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.NUMBER_KEY || e.getClick() == ClickType.DROP || e.getClick() == ClickType.CONTROL_DROP || e.getClick() == ClickType.DOUBLE_CLICK)){
+                    boolean canFit = TrinketsManager.canFitTrinketSlot(who, trinketInventory, item, e.getSlot());
+                    if (!canFit){
+                        e.setCancelled(true);
+                        return;
+                    }
+                    e.setCancelled(true);
+                    Utils.calculateClickEvent(e, 1, e.getSlot());
+                    ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
+                        TrinketsManager.addTrinketUnsafe(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
+                        setMenuItems();
+                    }, 1L);
+                } else if (cursorMeta == null && !emptyTrinketSlot){
+                    // clicking trinket with empty cursor
+                    if (clickedMeta.hasEnchant(Enchantment.BINDING_CURSE)){
+                        e.setCancelled(true);
+                        return;
+                    }
+
+                    // clicking on trinket with empty cursor
+                    TrinketsManager.removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
                     e.setCancelled(false);
+                    ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
+                    return;
+                    //InventoryUtils.calculateClickedSlot(e);
+                } else if (cursorMeta != null){
+                    // clicking on empty trinket slot
+                    TrinketItem item = new TrinketItem(cursor, null);
+                    boolean canFit = TrinketsManager.canFitTrinketSlot(who, trinketInventory, item, e.getSlot());
+                    if (!canFit){
+                        e.setCancelled(true);
+                        return;
+                    }
+                    e.setCancelled(true);
+                    inventory.setItem(e.getSlot(), null);
+                    Utils.calculateClickEvent(e, 1, e.getSlot());
+                    TrinketsManager.addTrinket(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
+                    setMenuItems();
                 }
             }
+        } else if ((e.isLeftClick() || e.isRightClick()) && e.isShiftClick()){
+            if (clickedInventory instanceof PlayerInventory && clickedMeta != null){
+                TrinketType type = TrinketsManager.getTrinketType(clickedMeta);
+                if (type != null){
+                    TrinketItem item = new TrinketItem(clicked, null);
+
+                    TrinketSlot firstEmpty = TrinketsManager.getFirstAvailableTrinketSlot(who, trinketInventory, item);
+                    if (firstEmpty != null){
+                        ItemStack trinketToPut = clicked.clone();
+                        trinketToPut.setAmount(1);
+                        e.setCancelled(true);
+                        e.getView().getTopInventory().setItem(firstEmpty.getSlot(), trinketToPut);
+                        TrinketsManager.addTrinket(playerMenuUtility.getOwner(), trinketToPut, firstEmpty.getSlot());
+                        if (clicked.getAmount() <= 1) e.setCurrentItem(null);
+                        else clicked.setAmount(clicked.getAmount() - 1);
+                    }
+                }
+            } else if (clickedInventory.getHolder() instanceof TrinketMenu){
+                if (clickedMeta != null && playerMenuUtility.getOwner().getInventory().firstEmpty() >= 0){
+                    if (clickedMeta.hasEnchant(Enchantment.BINDING_CURSE)) {
+                        e.setCancelled(true);
+                        return;
+                    }
+
+                    TrinketType type = TrinketsManager.getTrinketType(clickedMeta);
+                    if (type != null){
+                        e.setCancelled(false);
+                        TrinketsManager.removeTrinket(playerMenuUtility.getOwner(), e.getSlot());
+                        ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), this::setMenuItems, 1L);
+                        return;
+                    }
+                }
+            }
+        } else if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.NUMBER_KEY || e.getClick() == ClickType.DROP ||
+                e.getClick() == ClickType.CONTROL_DROP || e.getClick() == ClickType.DOUBLE_CLICK)){
+            e.setCancelled(false);
         }
         setMenuItems();
     }
@@ -178,21 +166,17 @@ public class TrinketMenu extends Menu {
 
     @Override
     public void setMenuItems() {
-        if (TrinketsManager.getInstance().getFillerItem() != null){
-            for (int i = 0; i < size; i++){
-                inventory.setItem(i, TrinketsManager.getInstance().getFillerItem());
-            }
+        if (TrinketsManager.getFillerItem() != null){
+            for (int i = 0; i < size; i++) inventory.setItem(i, TrinketsManager.getFillerItem());
         }
-        for (TrinketType type : TrinketsManager.getInstance().getTrinketTypes().values()){
-            if (type.getPlaceholderItem() != null){
-                for (int slot : type.getValidSlots()){
-                    inventory.setItem(slot, type.getPlaceholderItem());
-                }
-            }
+        for (TrinketSlot type : TrinketsManager.getTrinketSlots().values()){
+            if (type.getPermissionRequired() != null && !Utils.isEmpty(type.getLockedIcon()) &&
+                    !playerMenuUtility.getOwner().hasPermission(type.getPermissionRequired())) inventory.setItem(type.getSlot(), type.getLockedIcon());
+            else if (!Utils.isEmpty(type.getIcon())) inventory.setItem(type.getSlot(), type.getIcon());
         }
-        Map<Integer, ItemStack> inventory = TrinketsManager.getInstance().getTrinketInventory(playerMenuUtility.getOwner());
+        Map<Integer, TrinketItem> inventory = TrinketCache.getOrCache(playerMenuUtility.getOwner());
         for (int trinketSlot : inventory.keySet()){
-            this.inventory.setItem(trinketSlot, inventory.get(trinketSlot));
+            this.inventory.setItem(trinketSlot, inventory.get(trinketSlot).getItem());
         }
     }
 }

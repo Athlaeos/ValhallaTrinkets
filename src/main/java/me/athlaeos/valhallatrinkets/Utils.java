@@ -4,18 +4,124 @@ import net.md_5.bungee.api.ChatColor;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
+import org.bukkit.event.inventory.ClickType;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import java.util.List;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Utils {
-    public static boolean isItemEmptyOrNull(ItemStack i){
-        if (i == null) return true;
-        return i.getType().isAir();
+    public static boolean isEmpty(ItemStack i){
+        return i == null || i.getType().isAir() || i.getAmount() <= 0;
+    }
+
+    private static final Collection<ClickType> legalClickTypes = new HashSet<>(Arrays.asList(ClickType.DROP, ClickType.CONTROL_DROP,
+            ClickType.MIDDLE, ClickType.WINDOW_BORDER_LEFT, ClickType.WINDOW_BORDER_RIGHT, ClickType.UNKNOWN, ClickType.CREATIVE, ClickType.SHIFT_LEFT, ClickType.SHIFT_RIGHT));
+    private static final Collection<ClickType> illegalClickTypes = new HashSet<>(Arrays.asList(ClickType.SWAP_OFFHAND, ClickType.NUMBER_KEY, ClickType.DOUBLE_CLICK));
+
+    public static void calculateClickEvent(InventoryClickEvent e, int maxAmount, Integer... slotsToCover){
+        Player p = (Player) e.getWhoClicked();
+        ItemStack cursor = p.getItemOnCursor();
+        ItemStack clickedItem = e.getCurrentItem();
+        if (e.getClickedInventory() == null) return;
+        Inventory openInventory = e.getView().getTopInventory();
+        e.setCancelled(true);
+        if (e.getClickedInventory() instanceof PlayerInventory){
+            // player inventory item clicked
+            if (e.isShiftClick() && !isEmpty(clickedItem)){
+                // shift click, check if slotsToCalculate are available for new items, otherwise do nothing more as there's no slot to transfer to
+                for (Integer i : slotsToCover){
+                    ItemStack slotItem = openInventory.getItem(i);
+                    if (isEmpty(slotItem)) {
+                        if (clickedItem.getAmount() <= maxAmount) {
+                            openInventory.setItem(i, clickedItem);
+                            e.setCurrentItem(null);
+                        }
+                        else {
+                            ItemStack itemToPut = clickedItem.clone();
+                            itemToPut.setAmount(maxAmount);
+                            if (clickedItem.getAmount() - maxAmount <= 0) e.setCurrentItem(null);
+                            else clickedItem.setAmount(clickedItem.getAmount() - maxAmount);
+                            openInventory.setItem(i, itemToPut);
+                        }
+                        return;
+                    } else if (slotItem.isSimilar(clickedItem)) {
+                        // similar slot item, add as much as possible
+                        if (slotItem.getAmount() < maxAmount) {
+                            int amountToTransfer = Math.min(clickedItem.getAmount(), maxAmount - slotItem.getAmount());
+                            if (clickedItem.getAmount() == amountToTransfer) {
+                                e.setCurrentItem(null);
+                            } else {
+                                if (clickedItem.getAmount() - amountToTransfer <= 0) e.setCurrentItem(null);
+                                else clickedItem.setAmount(clickedItem.getAmount() - amountToTransfer);
+                            }
+                            slotItem.setAmount(slotItem.getAmount() + amountToTransfer);
+                        }
+                    }
+                }
+                // no available slot found, do nothing more
+            } else e.setCancelled(false); // regular inventory click, do nothing special
+        } else if (e.getClickedInventory().equals(e.getView().getTopInventory())){
+            // opened inventory clicked
+            if (legalClickTypes.contains(e.getClick())) { // inconsequential action used, allow event and do nothing more
+                e.setCancelled(false);
+                return;
+            }
+            if (illegalClickTypes.contains(e.getClick())) return; // incalculable action used, event is cancelled and do nothing more
+            // other actions have to be calculated
+            if (e.isLeftClick() || e.isRightClick()) {
+                // transfer or swap all if not similar
+                if (isEmpty(cursor)){
+                    // pick up clicked item, should be fine
+                    e.setCancelled(false);
+                } else {
+                    if (isEmpty(clickedItem)){
+                        int amountToTransfer = (e.isRightClick() ? 1 : maxAmount);
+                        if (cursor.getAmount() > amountToTransfer){
+                            ItemStack itemToTransfer = cursor.clone();
+                            itemToTransfer.setAmount(amountToTransfer);
+                            e.setCurrentItem(itemToTransfer);
+                            cursor.setAmount(cursor.getAmount() - amountToTransfer);
+                            p.setItemOnCursor(cursor);
+                        } else {
+                            e.setCurrentItem(cursor);
+                            p.setItemOnCursor(null);
+                        }
+                    } else {
+                        // swap or transfer items
+                        if (cursor.isSimilar(clickedItem)){
+                            // are similar, transfer as much as possible
+                            int clickedMax = Math.min(clickedItem.getType().getMaxStackSize(), maxAmount);
+                            if (clickedItem.getAmount() < clickedMax){
+                                int amountToTransfer = e.isRightClick() ? 1 : Math.min(cursor.getAmount(), clickedMax - clickedItem.getAmount());
+                                if (cursor.getAmount() == amountToTransfer) {
+                                    p.setItemOnCursor(null);
+                                } else {
+                                    cursor.setAmount(cursor.getAmount() - amountToTransfer);
+                                    p.setItemOnCursor(cursor);
+                                }
+                                clickedItem.setAmount(clickedItem.getAmount() + amountToTransfer);
+                            } // clicked item already equals or exceeds max amount, do nothing more
+                        } else {
+                            // not similar, swap items if cursor has valid amount
+                            if (cursor.getAmount() <= maxAmount){
+                                // valid amount, swap items
+                                ItemStack temp = cursor.clone();
+                                p.setItemOnCursor(clickedItem);
+                                e.setCurrentItem(temp);
+                            } // invalid amount, do nothing more
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public static ItemStack createSimpleItem(Material type, int data, String itemDisplayName, List<String> lore){
