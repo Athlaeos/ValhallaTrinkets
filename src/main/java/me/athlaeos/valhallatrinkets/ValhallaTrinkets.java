@@ -11,27 +11,24 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class ValhallaTrinkets extends JavaPlugin {
     private static ValhallaTrinkets plugin = null;
-    private static boolean valhallaHooked = false;
     private static boolean illHandleTrinketMenu = false;
     private static final Map<Class<? extends PluginHook>, PluginHook> activeHooks = new HashMap<>();
 
     @Override
     public void onLoad(){
+        plugin = this;
         registerHook(new ValhallaHook());
     }
 
     @Override
     public void onEnable() {
-        plugin = this;
         saveAndUpdateConfig("config.yml");
         TrinketsManager.loadTrinketTypes();
-        valhallaHooked = Arrays.stream(getServer().getPluginManager().getPlugins()).anyMatch(p -> p.getName().equals("ValhallaMMO"));
         for (PluginHook hook : activeHooks.values()) hook.whenPresent();
 
         new TrinketsCommand();
@@ -65,10 +62,6 @@ public final class ValhallaTrinkets extends JavaPlugin {
     private void saveAndUpdateConfig(String config){
         save(config);
         updateConfig(config);
-    }
-
-    public static boolean isValhallaHooked() {
-        return valhallaHooked;
     }
 
     public void save(String name){

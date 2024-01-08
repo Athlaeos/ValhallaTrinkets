@@ -4,6 +4,7 @@ import me.athlaeos.valhallammo.ValhallaMMO;
 import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
+import me.athlaeos.valhallatrinkets.valhallammo.ValhallaHook;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.ClickType;
@@ -27,12 +28,12 @@ public class TrinketMenu extends Menu {
     @Override
     public String getMenuName() {
         switch ((size - 9) / 9){
-            case 5: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF546" : title)) : title);
-            case 4: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF545" : title)) : title);
-            case 3: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF544" : title)) : title);
-            case 2: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF543" : title)) : title);
-            case 1: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF542" : title)) : title);
-            default: return (ValhallaTrinkets.isValhallaHooked() ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF541" : title)) : title);
+            case 5: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF546" : title)) : title);
+            case 4: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF545" : title)) : title);
+            case 3: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF544" : title)) : title);
+            case 2: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF543" : title)) : title);
+            case 1: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF542" : title)) : title);
+            default: return (ValhallaTrinkets.isHooked(ValhallaHook.class) ? (Utils.chat(ValhallaMMO.isResourcePackConfigForced() ? "&f\uF808\uF541" : title)) : title);
         }
     }
 

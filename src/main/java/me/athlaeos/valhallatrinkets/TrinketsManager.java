@@ -1,7 +1,9 @@
 package me.athlaeos.valhallatrinkets;
 
+import me.athlaeos.valhallammo.playerstats.AccumulativeStatManager;
 import me.athlaeos.valhallammo.playerstats.EntityCache;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
+import me.athlaeos.valhallatrinkets.valhallammo.ValhallaHook;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -109,22 +111,14 @@ public class TrinketsManager {
             // if the item has an ID and any of the trinket items match in ID where either are marked unique, it cannot fit
             for (TrinketItem i : trinketInventory.values()){
                 if (i.getID() == null) continue;
-                if ((i.isUnique() || item.isUnique()) && i.getID().intValue() == item.getID().intValue()) {
-                    System.out.println("item is unique and is already worn");
-                    return false;
-                }
+                if ((i.isUnique() || item.isUnique()) && i.getID().intValue() == item.getID().intValue()) return false;
             }
         }
         TrinketSlot s = trinketSlots.get(slot);
-        if (s == null) {
-            System.out.println("no trinket slot for " + slot);
-            return false;
-        }
+        if (s == null) return false;
         if (s.getPermissionRequired() != null && !p.hasPermission(s.getPermissionRequired())) return false;
-        if (!s.getValidTypes().contains(item.getType().getID())) {
-            System.out.println("valid types for " + s.getSlot() + " doesnt contain " + item.getType().getID() + ", " + s.getValidTypes().stream().map(String::valueOf).collect(Collectors.joining(", ")));
-            return false;
-        }
+        if (!s.getValidTypes().contains(item.getType().getID())) return false;
+
         return trinketInventory.get(slot) == null;
     }
 
@@ -146,7 +140,12 @@ public class TrinketsManager {
             p.getPersistentDataContainer().set(INVENTORY_KEY, PersistentDataType.STRING, String.join("<itemsplitter>", stringElements));
         }
         TrinketCache.reset(p);
-        if (ValhallaTrinkets.isValhallaHooked()) EntityCache.resetEquipment(p);
+        ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
+            if (ValhallaTrinkets.isHooked(ValhallaHook.class)) {
+                EntityCache.resetEquipment(p);
+                AccumulativeStatManager.updateStats(p);
+            }
+        }, 2L);
     }
 
     /**
