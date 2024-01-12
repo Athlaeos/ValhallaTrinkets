@@ -32,7 +32,7 @@ public class TrinketsListener implements Listener {
         dropTrinketsOnDeath = ConfigManager.getInstance().getConfig("config.yml").get().getBoolean("drop_trinkets_on_death", true);
     }
 
-    @EventHandler(priority = EventPriority.LOWEST)
+    @EventHandler(priority = EventPriority.LOW)
     public void onPlayerDeath(PlayerDeathEvent e){
         if (!e.getKeepInventory() && dropTrinketsOnDeath){
             e.getDrops().addAll(TrinketsManager.getTrinketInventory(e.getEntity()).values().stream().filter(
