@@ -1,5 +1,6 @@
 package me.athlaeos.valhallatrinkets;
 
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
@@ -20,7 +21,7 @@ public class TrinketCache {
         return entry.trinkets;
     }
 
-    public static void reset(Player p){
+    public static void reset(LivingEntity p){
         cache.remove(p.getUniqueId());
     }
 

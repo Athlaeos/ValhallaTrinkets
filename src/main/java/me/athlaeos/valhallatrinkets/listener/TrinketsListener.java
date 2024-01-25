@@ -6,12 +6,14 @@ import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
 import me.athlaeos.valhallatrinkets.menus.TrinketMenu;
 import org.bukkit.GameRule;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
@@ -45,6 +47,12 @@ public class TrinketsListener implements Listener {
                     }).map(TrinketItem::getItem).collect(Collectors.toSet()));
             TrinketsManager.setTrinketInventory(e.getEntity(), new HashMap<>());
         }
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onEntityDeath(EntityDeathEvent e){
+        if (e.getEntityType() == EntityType.PLAYER) return;
+        TrinketCache.reset(e.getEntity());
     }
 
     @EventHandler

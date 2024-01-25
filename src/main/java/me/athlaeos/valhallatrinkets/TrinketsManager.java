@@ -9,13 +9,12 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class TrinketsManager {
     private static final NamespacedKey ID_KEY = new NamespacedKey(ValhallaTrinkets.getPlugin(), "trinket_id");
@@ -53,12 +52,12 @@ public class TrinketsManager {
     }
 
     /**
-     * Fetches the player's trinket inventory, returns it as a map where the key represents the inventory slot the trinket is present in
+     * Fetches the entity's trinket inventory, returns it as a map where the key represents the inventory slot the trinket is present in
      * and the value representing the actual trinket.
-     * @param p the player to get their trinket inventory from
+     * @param p the entity to get their trinket inventory from
      * @return the trinket inventory
      */
-    public static Map<Integer, TrinketItem> getTrinketInventory(Player p){
+    public static Map<Integer, TrinketItem> getTrinketInventory(LivingEntity p){
         Map<Integer, TrinketItem> inventory = new HashMap<>();
         if (p.getPersistentDataContainer().has(INVENTORY_KEY, PersistentDataType.STRING)){
             String value = p.getPersistentDataContainer().get(INVENTORY_KEY, PersistentDataType.STRING);
@@ -85,11 +84,11 @@ public class TrinketsManager {
      * Returns the first available trinket slot from the given inventory for the given trinket type, if any. Also takes
      * into consideration any permissions that might be required for that slot to be used.
      * @param p the owner of the given trinket inventory
-     * @param trinketInventory the player's trinket inventory
+     * @param trinketInventory the entity's trinket inventory
      * @param item the trinket of which to check the first slot in which it fits
      * @return the trinket slot the given trinket can fit in, or null if none are available
      */
-    public static TrinketSlot getFirstAvailableTrinketSlot(Player p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item){
+    public static TrinketSlot getFirstAvailableTrinketSlot(LivingEntity p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item){
         for (Integer s : trinketSlots.keySet()){
             TrinketSlot slot = trinketSlots.get(s);
             if (canFitTrinketSlot(p, trinketInventory, item, s)) return slot;
@@ -98,14 +97,14 @@ public class TrinketsManager {
     }
 
     /**
-     * Checks if the given trinket type fits into the given slot in the given trinket inventory belonging to the given player.
+     * Checks if the given trinket type fits into the given slot in the given trinket inventory belonging to the given entity.
      * @param p the owner of the trinket inventory
      * @param trinketInventory the trinket inventory
      * @param item the type of trinket to check if it fits the slot
      * @param slot the slot in which to try and see if the trinket fits in it
      * @return true if it fits, false if not
      */
-    public static boolean canFitTrinketSlot(Player p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item, int slot){
+    public static boolean canFitTrinketSlot(LivingEntity p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item, int slot){
         if (item.getType() == null) return false;
         if (item.getID() != null){
             // if the item has an ID and any of the trinket items match in ID where either are marked unique, it cannot fit
@@ -123,11 +122,11 @@ public class TrinketsManager {
     }
 
     /**
-     * Sets the player's trinket inventory, and resets the trinket cache.
-     * @param p the player to set their trinket inventory to
-     * @param inventory the trinket inventory to set to the player
+     * Sets the entity's trinket inventory, and resets the trinket cache.
+     * @param p the entity to set their trinket inventory to
+     * @param inventory the trinket inventory to set to the entity
      */
-    public static void setTrinketInventory(Player p, Map<Integer, TrinketItem> inventory){
+    public static void setTrinketInventory(LivingEntity p, Map<Integer, TrinketItem> inventory){
         if (inventory == null || inventory.isEmpty()){
             p.getPersistentDataContainer().remove(INVENTORY_KEY);
         } else {
@@ -149,26 +148,26 @@ public class TrinketsManager {
     }
 
     /**
-     * Adds an item to a player's trinket inventory regardless of any occupied slots
+     * Adds an item to a entity's trinket inventory regardless of any occupied slots
      * If the slot is already occupied, it will be overwritten and thus destroyed
-     * @param p the player to add a trinket to
+     * @param p the entity to add a trinket to
      * @param i the trinket to add
      * @param slot the slot to add the trinket to
      */
-    public static void addTrinketUnsafe(Player p, ItemStack i, int slot){
+    public static void addTrinketUnsafe(LivingEntity p, ItemStack i, int slot){
         Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
         currentInventory.put(slot, new TrinketItem(i, trinketSlots.get(slot)));
         setTrinketInventory(p, currentInventory);
     }
 
     /**
-     * Adds an item to a player's trinket inventory
-     * @param p the player to add a trinket to
+     * Adds an item to a entity's trinket inventory
+     * @param p the entity to add a trinket to
      * @param i the trinket to add
      * @param slot the slot to add the trinket to
      * @return true if the trinket was added, false if the trinket slot was already occupied
      */
-    public static boolean addTrinket(Player p, ItemStack i, int slot){
+    public static boolean addTrinket(LivingEntity p, ItemStack i, int slot){
         Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
         if (currentInventory.containsKey(slot)) return false;
         currentInventory.put(slot, new TrinketItem(i, trinketSlots.get(slot)));
@@ -177,12 +176,12 @@ public class TrinketsManager {
     }
 
     /**
-     * Removes an item from a player's trinket inventory
-     * @param p the player to remove a trinket from
+     * Removes an item from a entity's trinket inventory
+     * @param p the entity to remove a trinket from
      * @param slot the trinket slot to remove
      * @return true if a trinket was removed, false if the slot was empty
      */
-    public static boolean removeTrinket(Player p, int slot){
+    public static boolean removeTrinket(LivingEntity p, int slot){
         Map<Integer, TrinketItem> currentInventory = getTrinketInventory(p);
         if (!currentInventory.containsKey(slot)) return false;
         currentInventory.remove(slot);
