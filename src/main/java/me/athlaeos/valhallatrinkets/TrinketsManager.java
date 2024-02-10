@@ -106,6 +106,7 @@ public class TrinketsManager {
      */
     public static boolean canFitTrinketSlot(LivingEntity p, Map<Integer, TrinketItem> trinketInventory, TrinketItem item, int slot){
         if (item.getType() == null) return false;
+        if (!p.hasPermission("trinkets.allowtrinkets")) return false;
         if (item.getID() != null){
             // if the item has an ID and any of the trinket items match in ID where either are marked unique, it cannot fit
             for (TrinketItem i : trinketInventory.values()){
