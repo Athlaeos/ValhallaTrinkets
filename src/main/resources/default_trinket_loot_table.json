@@ -1,0 +1,470 @@
+{
+  "key": "trinkets",
+  "pools": {
+    "trinkets": {
+      "parentTable": "trinkets",
+      "key": "trinkets",
+      "entries": {
+        "dec1477a-5fe6-4f74-a3c9-c71a75a5b41e": {
+          "uuid": "dec1477a-5fe6-4f74-a3c9-c71a75a5b41e",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_amulet_of_vitality",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "52eeff9e-a3f8-4ff3-9165-aa94b03e91d7": {
+          "uuid": "52eeff9e-a3f8-4ff3-9165-aa94b03e91d7",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_reach",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "e35b4561-cb30-415d-8f23-2957622c538a": {
+          "uuid": "e35b4561-cb30-415d-8f23-2957622c538a",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_amulet_of_the_avenger",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "6a536d5b-b93c-411c-b553-5d770ca61043": {
+          "uuid": "6a536d5b-b93c-411c-b553-5d770ca61043",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_cross_necklace",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "a6a5223b-f018-4d90-add6-bc46b45d3c32": {
+          "uuid": "a6a5223b-f018-4d90-add6-bc46b45d3c32",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_band_of_precision",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "e86111d3-b5e4-4c1b-9b6e-7b9964d1fd61": {
+          "uuid": "e86111d3-b5e4-4c1b-9b6e-7b9964d1fd61",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_armored_bracer",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "99af6a2d-57af-486f-97ca-2d44ad066ae5": {
+          "uuid": "99af6a2d-57af-486f-97ca-2d44ad066ae5",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_obsidian",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "5772b717-e680-4be6-8cfa-ae409c77861c": {
+          "uuid": "5772b717-e680-4be6-8cfa-ae409c77861c",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_shattering",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "964c5527-d931-478e-b187-dc0fb03ffc16": {
+          "uuid": "964c5527-d931-478e-b187-dc0fb03ffc16",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_deflection",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "7732ec27-2eb1-4c13-9662-4a551d54aee2": {
+          "uuid": "7732ec27-2eb1-4c13-9662-4a551d54aee2",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_amulet_of_adrenaline",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "eb1e4da0-6bfa-478c-b586-e4d4d03d8e31": {
+          "uuid": "eb1e4da0-6bfa-478c-b586-e4d4d03d8e31",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_magic_quiver",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "8b183cae-8d21-4946-b9fe-978d79ea8810": {
+          "uuid": "8b183cae-8d21-4946-b9fe-978d79ea8810",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_amulet_of_mania",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "9959601d-d859-4a33-b126-04e52839132c": {
+          "uuid": "9959601d-d859-4a33-b126-04e52839132c",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_warding",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "bad7f85b-bc80-4519-b3c4-dac8c112d852": {
+          "uuid": "bad7f85b-bc80-4519-b3c4-dac8c112d852",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_ring_of_protection",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "7d6c56e3-5207-4570-9167-50d7f88341b1": {
+          "uuid": "7d6c56e3-5207-4570-9167-50d7f88341b1",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_bezoar",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "02b70280-d89f-4fc7-9ba7-5cf2ad4f3148": {
+          "uuid": "02b70280-d89f-4fc7-9ba7-5cf2ad4f3148",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_adhesive_bandage",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "ac750bcc-8082-4563-b31c-f9cad25b8988": {
+          "uuid": "ac750bcc-8082-4563-b31c-f9cad25b8988",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_band_of_force",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        },
+        "46e0243b-fd1b-474e-98ac-d768c7567dc2": {
+          "uuid": "46e0243b-fd1b-474e-98ac-d768c7567dc2",
+          "parentPool": "trinkets",
+          "drop": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAAA3QAAj09\r\ndAABdnQABHR5cGV1cQB+AAYAAAADdAAeb3JnLmJ1a2tpdC5pbnZlbnRvcnkuSXRlbVN0YWNrc3IA\r\nEWphdmEubGFuZy5JbnRlZ2VyEuKgpPeBhzgCAAFJAAV2YWx1ZXhyABBqYXZhLmxhbmcuTnVtYmVy\r\nhqyVHQuU4IsCAAB4cAAADCF0AApJUk9OX0lOR09U\r\n",
+          "baseQuantityMin": 1,
+          "baseQuantityMax": 1,
+          "quantityMinFortuneBase": 0.0,
+          "quantityMaxFortuneBase": 0.0,
+          "predicates": [],
+          "chance": 0.1,
+          "chanceQuality": 0.5,
+          "weight": 10.0,
+          "weightQuality": 10.0,
+          "guaranteedPresent": false,
+          "modifiers": [{
+            "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.ItemReplaceByIndexed",
+            "DATA": {
+              "item": "trinket_band_of_regeneration",
+              "name": "replace_by_custom",
+              "priority": "SOONEST"
+            }
+          }
+          ],
+          "predicateSelection": "ANY"
+        }
+      },
+      "predicates": [],
+      "weighted": true,
+      "weightedRolls": 1,
+      "bonusLuckRolls": 0.20000000000000004,
+      "dropChance": 0.2,
+      "dropLuckChance": 0.1,
+      "predicateSelection": "ANY"
+    }
+  },
+  "icon": "CHEST",
+  "vanillaLootPreservationType": "KEEP"
+}

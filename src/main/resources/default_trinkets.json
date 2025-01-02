@@ -1,0 +1,1324 @@
+[
+  {
+    "id": "trinket_purity",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXB1cml0eT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1wdXJpdHk+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4Adrx9\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "POISON_RESISTANCE",
+          "value": 0.8999999999999999,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SPIDER_EYE",
+          "name": "attribute_add_poison_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 501,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_amulet_of_vitality",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAo3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFtdWxldC1vZi12aXRhbGl0eT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1hbXVs\r\nZXQtb2Ytdml0YWxpdHk+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adrya\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_MAX_HEALTH",
+          "value": 4.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "GOLDEN_APPLE",
+          "name": "attribute_add_generic_max_health",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 530,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_gungnirs_might",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAm3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWd1bmduaXJzLW1pZ2h0PiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWd1bmduaXJz\r\nLW1pZ2h0PiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8qw==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 347,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ATTACK_REACH",
+          "value": 1.5,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "ENDER_PEARL",
+          "name": "attribute_add_attack_reach",
+          "priority": "LAST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_divine_necklace",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAnXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWRpdmluZS1uZWNrbGFjZT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1kaXZpbmUt\r\nbmVja2xhY2U+In1dLCJ0ZXh0IjoiIn1zcQB+AA4AdryR\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "IMMUNITY_BONUS_FLAT",
+          "value": 12.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 1.0,
+          "bigIncrement": 5.0,
+          "icon": "GOLDEN_APPLE",
+          "name": "attribute_add_immunity_bonus_flat",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 521,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_erinle",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWVyaW5sZT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1lcmlubGU+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4Adryb\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_MAX_HEALTH",
+          "value": 12.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "GOLDEN_APPLE",
+          "name": "attribute_add_generic_max_health",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 531,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_reach",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAmXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2YtcmVhY2g+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtcmluZy1vZi1y\r\nZWFjaD4ifV0sInRleHQiOiIifXNxAH4ADgB2vKo=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ATTACK_REACH",
+          "value": 0.4999999999999998,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "ENDER_PEARL",
+          "name": "attribute_add_attack_reach",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 546,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_juggernaut",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAk3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWp1Z2dlcm5hdXQ+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtanVnZ2VybmF1dD4i\r\nfV0sInRleHQiOiIifXNxAH4ADgB2vIc=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_ARMOR",
+          "value": 15.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "IRON_CHESTPLATE",
+          "name": "attribute_add_generic_armor",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_KNOCKBACK_RESISTANCE",
+          "value": 0.4,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "NETHERITE_CHESTPLATE",
+          "name": "attribute_add_generic_knockback_resistance",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 511,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_kratos",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWtyYXRvcz4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1rcmF0b3M+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4AdryX\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_MELEE",
+          "value": 0.30000000000000004,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "DIAMOND_SWORD",
+          "name": "attribute_add_damage_melee",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 527,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_amulet_of_the_avenger",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAqXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFtdWxldC1vZi10aGUtYXZlbmdlcj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1h\r\nbXVsZXQtb2YtdGhlLWF2ZW5nZXI+In1dLCJ0ZXh0IjoiIn1zcQB+AA4AdryW\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_MELEE",
+          "value": 0.1,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "DIAMOND_SWORD",
+          "name": "attribute_add_damage_melee",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 526,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_cross_necklace",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAm3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWNyb3NzLW5lY2tsYWNlPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWNyb3NzLW5l\r\nY2tsYWNlPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8kA==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "IMMUNITY_BONUS_FLAT",
+          "value": 4.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 1.0,
+          "bigIncrement": 5.0,
+          "icon": "GOLDEN_APPLE",
+          "name": "attribute_add_immunity_bonus_flat",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 520,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_narya",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAiXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LW5hcnlhPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LW5hcnlhPiJ9XSwidGV4dCI6\r\nIiJ9c3EAfgAOAHa8pw==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "FIRE_RESISTANCE",
+          "value": 0.75,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "LAVA_BUCKET",
+          "name": "attribute_add_fire_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 543,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_band_of_precision",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAoXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWJhbmQtb2YtcHJlY2lzaW9uPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWJhbmQt\r\nb2YtcHJlY2lzaW9uPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8gA==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "CRIT_CHANCE",
+          "value": 0.07000000000000002,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "GOLDEN_SWORD",
+          "name": "attribute_add_crit_chance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "CRIT_DAMAGE",
+          "value": 0.15000000000000002,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "IRON_SWORD",
+          "name": "attribute_add_crit_damage",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 504,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_armored_bracer",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAm3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFybW9yZWQtYnJhY2VyPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWFybW9yZWQt\r\nYnJhY2VyPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8hg==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_ARMOR",
+          "value": 5.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "IRON_CHESTPLATE",
+          "name": "attribute_add_generic_armor",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_KNOCKBACK_RESISTANCE",
+          "value": 0.1,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "NETHERITE_CHESTPLATE",
+          "name": "attribute_add_generic_knockback_resistance",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 510,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_obsidian",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAn3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2Ytb2JzaWRpYW4+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtcmluZy1v\r\nZi1vYnNpZGlhbj4ifV0sInRleHQiOiIifXNxAH4ADgB2vKY=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "FIRE_RESISTANCE",
+          "value": 0.25000000000000006,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "LAVA_BUCKET",
+          "name": "attribute_add_fire_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 542,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_fury",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAh3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWZ1cnk+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtZnVyeT4ifV0sInRleHQiOiIi\r\nfXNxAH4ADgB2vJU=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_ALL",
+          "value": 0.6,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "BLAZE_ROD",
+          "name": "attribute_add_damage_all",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_TAKEN",
+          "value": 0.9999999999999999,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SKELETON_SKULL",
+          "name": "attribute_add_damage_taken",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 525,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_shattering",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAo3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2Ytc2hhdHRlcmluZz4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1yaW5n\r\nLW9mLXNoYXR0ZXJpbmc+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adrys\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARMOR_PENETRATION_FRACTION",
+          "value": 0.10000000000000002,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "LEATHER_CHESTPLATE",
+          "name": "attribute_add_armor_penetration_fraction",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 548,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_magnus",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAm3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2YtbWFnbnVzPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LXJpbmctb2Yt\r\nbWFnbnVzPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8rw==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "MAGIC_RESISTANCE",
+          "value": 0.75,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "DRAGON_BREATH",
+          "name": "attribute_add_magic_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 551,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_deflection",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAo3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2YtZGVmbGVjdGlvbj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1yaW5n\r\nLW9mLWRlZmxlY3Rpb24+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adryk\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "PROJECTILE_RESISTANCE",
+          "value": 0.15000000000000002,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "ARROW",
+          "name": "attribute_add_projectile_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 540,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_rebirth",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAjXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJlYmlydGg+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtcmViaXJ0aD4ifV0sInRl\r\neHQiOiIifXNxAH4ADgB2vIM=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "HEALING_BONUS",
+          "value": 0.75,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "GLISTERING_MELON_SLICE",
+          "name": "attribute_add_healing_bonus",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 507,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_amulet_of_adrenaline",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAp3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFtdWxldC1vZi1hZHJlbmFsaW5lPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWFt\r\ndWxldC1vZi1hZHJlbmFsaW5lPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8mA==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_MOVEMENT_SPEED",
+          "value": 0.10000000000000002,
+          "operation": "ADD_SCALAR",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SUGAR",
+          "name": "attribute_add_generic_movement_speed",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "JUMPS",
+          "value": 1.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 1.0,
+          "bigIncrement": 3.0,
+          "icon": "STICKY_PISTON",
+          "name": "attribute_add_jumps",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "JUMP_HEIGHT",
+          "value": 0.3500000000000001,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SLIME_BLOCK",
+          "name": "attribute_add_jump_height",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 528,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_paladins_bane",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAmXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXBhbGFkaW5zLWJhbmU+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtcGFsYWRpbnMt\r\nYmFuZT4ifV0sInRleHQiOiIifXNxAH4ADgB2vK0=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARMOR_PENETRATION_FRACTION",
+          "value": 0.30000000000000016,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "LEATHER_CHESTPLATE",
+          "name": "attribute_add_armor_penetration_fraction",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 549,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_magic_quiver",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAl3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LW1hZ2ljLXF1aXZlcj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1tYWdpYy1xdWl2\r\nZXI+In1dLCJ0ZXh0IjoiIn1zcQB+AA4AdryS\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARROW_VELOCITY",
+          "value": 0.1,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "CROSSBOW",
+          "name": "attribute_add_arrow_velocity",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "AMMO_CONSUMPTION",
+          "value": -0.1,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SPECTRAL_ARROW",
+          "name": "attribute_add_ammo_consumption",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARROW_ACCURACY",
+          "value": 2.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "TARGET",
+          "name": "attribute_add_arrow_accuracy",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 522,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_amulet_of_mania",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAnXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFtdWxldC1vZi1tYW5pYT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1hbXVsZXQt\r\nb2YtbWFuaWE+In1dLCJ0ZXh0IjoiIn1zcQB+AA4AdryU\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_ALL",
+          "value": 0.2,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "BLAZE_ROD",
+          "name": "attribute_add_damage_all",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_TAKEN",
+          "value": 0.3500000000000001,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SKELETON_SKULL",
+          "name": "attribute_add_damage_taken",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 524,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_warding",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAnXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2Ytd2FyZGluZz4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1yaW5nLW9m\r\nLXdhcmRpbmc+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adryu\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "MAGIC_RESISTANCE",
+          "value": 0.25000000000000006,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "DRAGON_BREATH",
+          "name": "attribute_add_magic_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 550,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_hermes",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWhlcm1lcz4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1oZXJtZXM+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4AdryZ\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagCustomAdd",
+        "DATA": {
+          "flag": "DISPLAY_ATTRIBUTES",
+          "name": "flag_display_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_misc.FlagVanillaAdd",
+        "DATA": {
+          "flag": "HIDE_ATTRIBUTES",
+          "name": "flag_hide_attributes",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "GENERIC_MOVEMENT_SPEED",
+          "value": 0.30000000000000004,
+          "operation": "ADD_SCALAR",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SUGAR",
+          "name": "attribute_add_generic_movement_speed",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "JUMP_HEIGHT",
+          "value": 1.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SLIME_BLOCK",
+          "name": "attribute_add_jump_height",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "JUMPS",
+          "value": 3.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 1.0,
+          "bigIncrement": 3.0,
+          "icon": "STICKY_PISTON",
+          "name": "attribute_add_jumps",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 529,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_transfusion",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAlXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXRyYW5zZnVzaW9uPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LXRyYW5zZnVzaW9u\r\nPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8hQ==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "BLEED_RESISTANCE",
+          "value": 0.75,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "REDSTONE",
+          "name": "attribute_add_bleed_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 509,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_titans_glove",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAl3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXRpdGFucy1nbG92ZT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC10aXRhbnMtZ2xv\r\ndmU+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adrx/\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "KNOCKBACK",
+          "value": 0.9999999999999999,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SLIME_BLOCK",
+          "name": "attribute_add_knockback",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 503,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_ring_of_protection",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAo3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXJpbmctb2YtcHJvdGVjdGlvbj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1yaW5n\r\nLW9mLXByb3RlY3Rpb24+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adryo\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_RESISTANCE",
+          "value": 0.07,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "IRON_INGOT",
+          "name": "attribute_add_damage_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 544,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_artemis",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAjXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFydGVtaXM+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtYXJ0ZW1pcz4ifV0sInRl\r\neHQiOiIifXNxAH4ADgB2vJM=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARROW_ACCURACY",
+          "value": 5.0,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.1,
+          "bigIncrement": 1.0,
+          "icon": "TARGET",
+          "name": "attribute_add_arrow_accuracy",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "AMMO_CONSUMPTION",
+          "value": -0.30000000000000004,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SPECTRAL_ARROW",
+          "name": "attribute_add_ammo_consumption",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "ARROW_VELOCITY",
+          "value": 0.30000000000000004,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "CROSSBOW",
+          "name": "attribute_add_arrow_velocity",
+          "priority": "NEUTRAL"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 523,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_primordial_ring",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAnXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LXByaW1vcmRpYWwtcmluZz4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1wcmltb3Jk\r\naWFsLXJpbmc+In1dLCJ0ZXh0IjoiIn1zcQB+AA4Adryp\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "DAMAGE_RESISTANCE",
+          "value": 0.25000000000000006,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "IRON_INGOT",
+          "name": "attribute_add_damage_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 545,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_band_of_force",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAmXsiZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWJhbmQtb2YtZm9yY2U+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtYmFuZC1vZi1m\r\nb3JjZT4ifV0sInRleHQiOiIifXNxAH4ADgB2vH4=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "KNOCKBACK",
+          "value": 0.3500000000000001,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SLIME_BLOCK",
+          "name": "attribute_add_knockback",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 502,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_athena",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWF0aGVuYT4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1hdGhlbmE+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4Adryl\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "PROJECTILE_RESISTANCE",
+          "value": 0.5,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "ARROW",
+          "name": "attribute_add_projectile_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 541,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_deathbringer",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAl3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWRlYXRoYnJpbmdlcj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1kZWF0aGJyaW5n\r\nZXI+In1dLCJ0ZXh0IjoiIn1zcQB+AA4AdryB\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "CRIT_CHANCE",
+          "value": 0.14999999999999997,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "GOLDEN_SWORD",
+          "name": "attribute_add_crit_chance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "CRIT_DAMAGE",
+          "value": 0.4,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "IRON_SWORD",
+          "name": "attribute_add_crit_damage",
+          "priority": "SOONISH"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 505,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_bezoar",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAi3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWJlem9hcj4ifSwidGV4dCI6ImxhbmcudHJpbmtldC1iZXpvYXI+In1dLCJ0ZXh0\r\nIjoiIn1zcQB+AA4Adrx8\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "POISON_RESISTANCE",
+          "value": 0.30000000000000004,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "SPIDER_EYE",
+          "name": "attribute_add_poison_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 500,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_adhesive_bandage",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAn3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWFkaGVzaXZlLWJhbmRhaWQ+In0sInRleHQiOiJsYW5nLnRyaW5rZXQtYWRoZXNp\r\ndmUtYmFuZGFpZD4ifV0sInRleHQiOiIifXNxAH4ADgB2vIQ=\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "BLEED_RESISTANCE",
+          "value": 0.25000000000000006,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "REDSTONE",
+          "name": "attribute_add_bleed_resistance",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 508,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "trinket_band_of_regeneration",
+    "item": "rO0ABXNyABpvcmcuYnVra2l0LnV0aWwuaW8uV3JhcHBlcvJQR+zxEm8FAgABTAADbWFwdAAPTGph\r\ndmEvdXRpbC9NYXA7eHBzcgA1Y29tLmdvb2dsZS5jb21tb24uY29sbGVjdC5JbW11dGFibGVNYXAk\r\nU2VyaWFsaXplZEZvcm0AAAAAAAAAAAIAAkwABGtleXN0ABJMamF2YS9sYW5nL09iamVjdDtMAAZ2\r\nYWx1ZXNxAH4ABHhwdXIAE1tMamF2YS5sYW5nLk9iamVjdDuQzlifEHMpbAIAAHhwAAAABHQAAj09\r\ndAABdnQABHR5cGV0AARtZXRhdXEAfgAGAAAABHQAHm9yZy5idWtraXQuaW52ZW50b3J5Lkl0ZW1T\r\ndGFja3NyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5n\r\nLk51bWJlcoaslR0LlOCLAgAAeHAAAAwhdAAORU5DSEFOVEVEX0JPT0tzcQB+AABzcQB+AAN1cQB+\r\nAAYAAAAEcQB+AAh0AAltZXRhLXR5cGV0AAxkaXNwbGF5LW5hbWV0ABFjdXN0b20tbW9kZWwtZGF0\r\nYXVxAH4ABgAAAAR0AAhJdGVtTWV0YXQACUVOQ0hBTlRFRHQAp3siZXh0cmEiOlt7InRleHQiOiI8\r\nIn0seyJjbGlja0V2ZW50Ijp7ImFjdGlvbiI6Im9wZW5fdXJsIiwidmFsdWUiOiJodHRwOi8vbGFu\r\nZy50cmlua2V0LWJhbmQtb2YtcmVnZW5lcmF0aW9uPiJ9LCJ0ZXh0IjoibGFuZy50cmlua2V0LWJh\r\nbmQtb2YtcmVnZW5lcmF0aW9uPiJ9XSwidGV4dCI6IiJ9c3EAfgAOAHa8gg==\r\n",
+    "modifiers": [
+      {
+        "MOD_TYPE": "me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.implementations.item_stats.DefaultAttributeAdd",
+        "DATA": {
+          "attribute": "HEALING_BONUS",
+          "value": 0.25000000000000006,
+          "operation": "ADD_NUMBER",
+          "smallIncrement": 0.01,
+          "bigIncrement": 0.1,
+          "icon": "GLISTERING_MELON_SLICE",
+          "name": "attribute_add_healing_bonus",
+          "priority": "SOON"
+        }
+      },
+      {
+        "MOD_TYPE": "me.athlaeos.valhallatrinkets.valhallammo.TrinketTypeSetModifier",
+        "DATA": {
+          "trinket": 7,
+          "id": 506,
+          "unique": true,
+          "name": "trinket_type_set",
+          "priority": "SOONEST"
+        }
+      }
+    ]
+  }
+]
