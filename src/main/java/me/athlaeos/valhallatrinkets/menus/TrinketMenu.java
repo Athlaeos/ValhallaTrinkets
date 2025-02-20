@@ -47,7 +47,9 @@ public class TrinketMenu extends Menu {
         e.setCancelled(true);
         Inventory clickedInventory = e.getClickedInventory();
         if (clickedInventory == null || !(e.getWhoClicked() instanceof Player who)) return;
+
         if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.LEFT || e.getClick() == ClickType.RIGHT)) e.setCancelled(false);
+
         Map<Integer, TrinketItem> trinketInventory = TrinketCache.getOrCache(who);
         ItemStack clicked = e.getCurrentItem();
         ItemStack cursor = e.getCursor();
@@ -141,9 +143,7 @@ public class TrinketMenu extends Menu {
                 }
             }
         } else if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.NUMBER_KEY || e.getClick() == ClickType.DROP ||
-                e.getClick() == ClickType.CONTROL_DROP || e.getClick() == ClickType.DOUBLE_CLICK)){
-            e.setCancelled(false);
-        }
+                e.getClick() == ClickType.CONTROL_DROP || e.getClick() == ClickType.DOUBLE_CLICK)) e.setCancelled(false);
         setMenuItems();
     }
 

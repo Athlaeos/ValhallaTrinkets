@@ -48,16 +48,6 @@ public class Config {
 
         this.config = YamlConfiguration.loadConfiguration(file);
 
-        Reader defConfigStream;
-        try {
-            defConfigStream = new InputStreamReader(plugin.getResource(this.name), "UTF8");
-
-            if (defConfigStream != null) {
-                YamlConfiguration defConfig = YamlConfiguration.loadConfiguration(defConfigStream);
-                this.config.setDefaults(defConfig);
-            }
-        } catch (UnsupportedEncodingException | NullPointerException ignored) {
-        }
         return this;
     }
 

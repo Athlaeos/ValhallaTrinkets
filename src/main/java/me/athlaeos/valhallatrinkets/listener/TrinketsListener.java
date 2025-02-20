@@ -85,7 +85,6 @@ public class TrinketsListener implements Listener {
 
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
-        System.out.println("clicked slot: " + e.getSlot());
         if (e.isCancelled() || ValhallaTrinkets.IllHandleTrinketMenu() || TrinketsManager.getTrinketSlots().isEmpty() ||
                 e.getSlot() >= 0 || !(e.getWhoClicked() instanceof Player) || !Utils.isEmpty(e.getCursor())) return;
         if (e.getView().getBottomInventory() instanceof PlayerInventory && e.getView().getTopInventory() instanceof CraftingInventory){
