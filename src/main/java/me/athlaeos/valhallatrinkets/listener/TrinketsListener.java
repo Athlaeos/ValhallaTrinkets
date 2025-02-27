@@ -3,7 +3,6 @@ package me.athlaeos.valhallatrinkets.listener;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import me.athlaeos.valhallatrinkets.hooks.WorldGuardHook;
-import me.athlaeos.valhallatrinkets.hooks.WorldGuardWrapper;
 import me.athlaeos.valhallatrinkets.menus.PlayerMenuUtilManager;
 import me.athlaeos.valhallatrinkets.menus.TrinketMenu;
 import org.bukkit.GameRule;
@@ -19,6 +18,7 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.CraftingInventory;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
@@ -92,5 +92,10 @@ public class TrinketsListener implements Listener {
             if (((CraftingInventory) e.getView().getTopInventory()).getMatrix().length != 4) return;
             new TrinketMenu(PlayerMenuUtilManager.getPlayerMenuUtility((Player) e.getWhoClicked())).open();
         }
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR)
+    public void onPlayerJoin(PlayerJoinEvent e) {
+        PlayerMenuUtilManager.removePlayerMenuUtility(e.getPlayer().getUniqueId());
     }
 }

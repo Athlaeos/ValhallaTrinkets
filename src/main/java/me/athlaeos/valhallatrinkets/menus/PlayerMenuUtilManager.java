@@ -3,9 +3,10 @@ package me.athlaeos.valhallatrinkets.menus;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
+import java.util.UUID;
 
 public class PlayerMenuUtilManager {
-    private static HashMap<Player, PlayerMenuUtility> playerMenuMap = new HashMap<>();
+    private static final HashMap<UUID, PlayerMenuUtility> playerMenuMap = new HashMap<>();
 
     /**
      * Returns a PlayerMenuUtility object belonging to the given player, or a new blank one if none exist.
@@ -14,10 +15,14 @@ public class PlayerMenuUtilManager {
      * @return A PlayerMenuUtility object belonging to a player, or a new blank one if none were found.
      */
     public static PlayerMenuUtility getPlayerMenuUtility(Player p){
-        if (!playerMenuMap.containsKey(p)){
+        if (!playerMenuMap.containsKey(p.getUniqueId())){
             PlayerMenuUtility utility = new PlayerMenuUtility(p);
-            playerMenuMap.put(p, utility);
+            playerMenuMap.put(p.getUniqueId(), utility);
         }
-        return playerMenuMap.get(p);
+        return playerMenuMap.get(p.getUniqueId());
+    }
+
+    public static void removePlayerMenuUtility(UUID uuid){
+        playerMenuMap.remove(uuid);
     }
 }

@@ -45,6 +45,7 @@ public class TrinketMenu extends Menu {
     @Override
     public void handleMenu(InventoryClickEvent e) {
         e.setCancelled(true);
+        if (e.getClick() == ClickType.DOUBLE_CLICK) return;
         Inventory clickedInventory = e.getClickedInventory();
         if (clickedInventory == null || !(e.getWhoClicked() instanceof Player who)) return;
 
@@ -105,7 +106,7 @@ public class TrinketMenu extends Menu {
                     e.setCancelled(true);
                     inventory.setItem(e.getSlot(), null);
                     Utils.calculateClickEvent(e, 1, e.getSlot());
-                    TrinketsManager.addTrinket(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
+                    if (!ItemUtils.isEmpty(inventory.getItem(e.getSlot()))) TrinketsManager.addTrinket(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
                     setMenuItems();
                 }
             }
