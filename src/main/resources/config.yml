@@ -1,5 +1,6 @@
 drop_trinkets_on_death: true # trinkets will be preserved regardless of this option if the keepInventory gamerule is enabled
 
+outside_inventory_click: true # If false, clicking outside the player inventory will not open the trinket menu
 trinket_menu_size: 9 # trinket menu size must be a multiple of 9 up until 54, Minecraft doesn't support smaller inventories
 trinket_title: "&8Accessories" # Title of trinkets menu
 

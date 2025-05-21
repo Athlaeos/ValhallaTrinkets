@@ -3,7 +3,9 @@ package me.athlaeos.valhallatrinkets.valhallammo;
 import me.athlaeos.valhallammo.commands.Command;
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.DynamicItemModifier;
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierCategoryRegistry;
+import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierContext;
 import me.athlaeos.valhallammo.item.ItemBuilder;
+import me.athlaeos.valhallatrinkets.TrinketsManager;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -73,5 +75,7 @@ public class SetUnstackableModifier extends DynamicItemModifier {
     public void onButtonPress(InventoryClickEvent inventoryClickEvent, int i) { }
 
     @Override
-    public void processItem(Player player, ItemBuilder itemBuilder, boolean b, boolean b1, int i) { }
+    public void processItem(ModifierContext context) {
+        TrinketsManager.setUnstackable(context.getItem().getMeta(), true);
+    }
 }

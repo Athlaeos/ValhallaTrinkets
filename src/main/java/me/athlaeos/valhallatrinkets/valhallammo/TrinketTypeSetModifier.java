@@ -2,6 +2,7 @@ package me.athlaeos.valhallatrinkets.valhallammo;
 
 import me.athlaeos.valhallammo.commands.Command;
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.DynamicItemModifier;
+import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierContext;
 import me.athlaeos.valhallammo.item.EquipmentClass;
 import me.athlaeos.valhallammo.item.ItemBuilder;
 import me.athlaeos.valhallatrinkets.TrinketProperties;
@@ -136,11 +137,11 @@ public class TrinketTypeSetModifier extends DynamicItemModifier {
     }
 
     @Override
-    public void processItem(Player player, ItemBuilder itemBuilder, boolean b, boolean b1, int i) {
+    public void processItem(ModifierContext context) {
         TrinketType type = trinket < 0 ? null : TrinketsManager.getTrinketTypes().get(trinket);
-        TrinketsManager.setType(itemBuilder.getMeta(), type);
-        if (id >= 0) TrinketProperties.setTrinketID(itemBuilder.getMeta(), id);
-        TrinketProperties.setUniqueTrinket(itemBuilder.getMeta(), unique);
-        EquipmentClass.setEquipmentClass(itemBuilder.getMeta(), EquipmentClass.TRINKET);
+        TrinketsManager.setType(context.getItem().getMeta(), type);
+        if (id >= 0) TrinketProperties.setTrinketID(context.getItem().getMeta(), id);
+        TrinketProperties.setUniqueTrinket(context.getItem().getMeta(), unique);
+        EquipmentClass.setEquipmentClass(context.getItem().getMeta(), EquipmentClass.TRINKET);
     }
 }

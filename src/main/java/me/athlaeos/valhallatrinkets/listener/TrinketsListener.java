@@ -31,9 +31,11 @@ import java.util.stream.Collectors;
 
 public class TrinketsListener implements Listener {
     private final boolean dropTrinketsOnDeath;
+    private final boolean openMenuOnOutsideClick;
 
     public TrinketsListener(){
         dropTrinketsOnDeath = ConfigManager.getInstance().getConfig("config.yml").get().getBoolean("drop_trinkets_on_death", true);
+        openMenuOnOutsideClick = ConfigManager.getInstance().getConfig("config.yml").get().getBoolean("outside_inventory_click", true);
     }
 
     @EventHandler(priority = EventPriority.LOW)
@@ -86,7 +88,8 @@ public class TrinketsListener implements Listener {
     @EventHandler
     public void onMenuClick(InventoryClickEvent e){
         if (e.isCancelled() || ValhallaTrinkets.IllHandleTrinketMenu() || TrinketsManager.getTrinketSlots().isEmpty() ||
-                e.getSlot() >= 0 || !(e.getWhoClicked() instanceof Player) || !Utils.isEmpty(e.getCursor())) return;
+                e.getSlot() >= 0 || !(e.getWhoClicked() instanceof Player) || !Utils.isEmpty(e.getCursor()) ||
+                !openMenuOnOutsideClick) return;
         if (e.getView().getBottomInventory() instanceof PlayerInventory && e.getView().getTopInventory() instanceof CraftingInventory){
             if (!e.getWhoClicked().hasPermission("trinkets.allowtrinkets")) return;
             if (((CraftingInventory) e.getView().getTopInventory()).getMatrix().length != 4) return;
