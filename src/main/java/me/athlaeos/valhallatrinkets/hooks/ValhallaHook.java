@@ -40,8 +40,8 @@ public class ValhallaHook extends PluginHook {
         AccumulativeStatManager.register("ATTACK_DAMAGE_BONUS", new TrinketVanillaAttributeSource(Attribute.GENERIC_ATTACK_DAMAGE, AttributeModifier.Operation.ADD_NUMBER));
         AccumulativeStatManager.register("ATTACK_SPEED_BONUS", new TrinketVanillaAttributeSource(Attribute.GENERIC_ATTACK_SPEED, AttributeModifier.Operation.ADD_SCALAR));
         AccumulativeStatManager.register("LUCK_BONUS", new TrinketVanillaAttributeSource(Attribute.GENERIC_LUCK, AttributeModifier.Operation.ADD_NUMBER));
-//        AccumulativeStatManager.register("WEIGHTLESS_ARMOR", new TrinketVanillaAttributeSource(Attribute.GENERIC_ARMOR, AttributeModifier.Operation.ADD_NUMBER));
-//        AccumulativeStatManager.register("ARMOR_MULTIPLIER_BONUS", new TrinketVanillaAttributeSource(Attribute.GENERIC_ARMOR, AttributeModifier.Operation.ADD_SCALAR));
+        AccumulativeStatManager.register("WEIGHTLESS_ARMOR", new TrinketVanillaAttributeSource(Attribute.GENERIC_ARMOR, AttributeModifier.Operation.ADD_NUMBER));
+        AccumulativeStatManager.register("ARMOR_MULTIPLIER_BONUS", new TrinketVanillaAttributeSource(Attribute.GENERIC_ARMOR, AttributeModifier.Operation.ADD_SCALAR));
 
         EntityUtils.registerEquipmentFetcher(entity -> {
             if (entity instanceof Player)

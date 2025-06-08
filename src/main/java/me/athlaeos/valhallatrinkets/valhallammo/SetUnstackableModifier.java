@@ -2,13 +2,10 @@ package me.athlaeos.valhallatrinkets.valhallammo;
 
 import me.athlaeos.valhallammo.commands.Command;
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.DynamicItemModifier;
-import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierCategoryRegistry;
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierContext;
-import me.athlaeos.valhallammo.item.ItemBuilder;
 import me.athlaeos.valhallatrinkets.TrinketsManager;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
 
