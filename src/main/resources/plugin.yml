@@ -1,7 +1,7 @@
 name: ValhallaTrinkets
 version: '${project.version}'
 main: me.athlaeos.valhallatrinkets.ValhallaTrinkets
-api-version: 1.16
+api-version: 1.19
 depend: [ ValhallaMMO ]
 authors: [ Athlaeos ]
 description: Adds trinkets and a trinket menu hooking into ValhallaMMO, allowing people to wear things like rings or bracers that add to a player's stats
