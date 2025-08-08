@@ -7,7 +7,7 @@
     <name>ValhallaTrinkets</name>
     <groupId>me.athlaeos</groupId>
     <artifactId>valhallatrinkets</artifactId>
-    <version>2.3</version>
+    <version>2.5</version>
     <packaging>jar</packaging>
 
     <description>Adds trinkets and a trinket menu hooking into ValhallaMMO, allowing people to wear things like rings or

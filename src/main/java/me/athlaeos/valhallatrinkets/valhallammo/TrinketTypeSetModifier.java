@@ -5,6 +5,7 @@ import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.DynamicItemModifier
 import me.athlaeos.valhallammo.crafting.dynamicitemmodifiers.ModifierContext;
 import me.athlaeos.valhallammo.item.EquipmentClass;
 import me.athlaeos.valhallammo.item.ItemBuilder;
+import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallatrinkets.TrinketProperties;
 import me.athlaeos.valhallatrinkets.TrinketType;
 import me.athlaeos.valhallatrinkets.TrinketsManager;
@@ -13,6 +14,7 @@ import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -137,10 +139,14 @@ public class TrinketTypeSetModifier extends DynamicItemModifier {
 
     @Override
     public void processItem(ModifierContext context) {
+        ItemStack item = context.getItem().get();
+        ItemMeta meta = ItemUtils.getItemMeta(item);
+        if (meta == null) return;
         TrinketType type = trinket < 0 ? null : TrinketsManager.getTrinketTypes().get(trinket);
-        TrinketsManager.setType(context.getItem().getMeta(), type);
-        if (id >= 0) TrinketProperties.setTrinketID(context.getItem().getMeta(), id);
-        TrinketProperties.setUniqueTrinket(context.getItem().getMeta(), unique);
-        EquipmentClass.setEquipmentClass(context.getItem().getMeta(), EquipmentClass.TRINKET);
+        TrinketsManager.setType(meta, type);
+        if (id >= 0) TrinketProperties.setTrinketID(meta, id);
+        TrinketProperties.setUniqueTrinket(meta, unique);
+        EquipmentClass.setEquipmentClass(meta, EquipmentClass.TRINKET);
+        context.getItem().setMeta(meta);
     }
 }
