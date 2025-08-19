@@ -143,7 +143,7 @@ public class TrinketsManager {
         ValhallaTrinkets.getPlugin().getServer().getScheduler().runTaskLater(ValhallaTrinkets.getPlugin(), () -> {
             if (ValhallaTrinkets.isHooked(ValhallaHook.class)) {
                 EntityCache.resetEquipment(p);
-                AccumulativeStatManager.updateStats(p);
+                AccumulativeStatManager.resetAllCaches(p);
             }
         }, 2L);
     }
