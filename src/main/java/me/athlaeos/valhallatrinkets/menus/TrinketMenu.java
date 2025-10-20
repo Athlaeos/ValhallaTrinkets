@@ -1,7 +1,6 @@
 package me.athlaeos.valhallatrinkets.menus;
 
 import me.athlaeos.valhallammo.ValhallaMMO;
-import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallatrinkets.*;
 import me.athlaeos.valhallatrinkets.config.ConfigManager;
 import me.athlaeos.valhallatrinkets.hooks.ValhallaHook;
@@ -51,11 +50,11 @@ public class TrinketMenu extends Menu {
 
         if (clickedInventory instanceof PlayerInventory && (e.getClick() == ClickType.LEFT || e.getClick() == ClickType.RIGHT)) e.setCancelled(false);
 
-        Map<Integer, TrinketItem> trinketInventory = TrinketCache.getOrCache(who);
+        Map<Integer, TrinketItem> trinketInventory = TrinketsManager.getTrinketInventory(who);// TrinketCache.getOrCache(who);
         ItemStack clicked = e.getCurrentItem();
         ItemStack cursor = e.getCursor();
-        ItemMeta clickedMeta = ItemUtils.isEmpty(clicked) ? null : clicked.getItemMeta();
-        ItemMeta cursorMeta = ItemUtils.isEmpty(cursor) ? null : cursor.getItemMeta();
+        ItemMeta clickedMeta = Utils.isEmpty(clicked) ? null : clicked.getItemMeta();
+        ItemMeta cursorMeta = Utils.isEmpty(cursor) ? null : cursor.getItemMeta();
         if ((e.isLeftClick() || e.isRightClick()) && !e.isShiftClick()){
             if (TrinketsManager.getTrinketSlots().containsKey(e.getSlot()) && clickedInventory.getHolder() instanceof TrinketMenu){
                 // clicked a valid item slot
@@ -106,7 +105,7 @@ public class TrinketMenu extends Menu {
                     e.setCancelled(true);
                     inventory.setItem(e.getSlot(), null);
                     Utils.calculateClickEvent(e, 1, e.getSlot());
-                    if (!ItemUtils.isEmpty(inventory.getItem(e.getSlot()))) TrinketsManager.addTrinket(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
+                    if (!Utils.isEmpty(inventory.getItem(e.getSlot()))) TrinketsManager.addTrinket(playerMenuUtility.getOwner(), inventory.getItem(e.getSlot()), e.getSlot());
                     setMenuItems();
                 }
             }

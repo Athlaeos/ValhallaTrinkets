@@ -22,13 +22,15 @@ public class TrinketVanillaAttributeSource implements AccumulativeStatSource {
 
     @Override
     public double fetch(Entity statPossessor, boolean use) {
-        if (statPossessor instanceof Player){
-            Player p = (Player) statPossessor;
+        if (attribute == null) return 0;
+        if (statPossessor instanceof Player p){
             Map<Integer, TrinketItem> trinketInventory = TrinketCache.getOrCache(p);
             double value = 0;
             for (TrinketItem item : trinketInventory.values()){
                 Collection<AttributeModifier> modifiers = item.getMeta().getAttributeModifiers(attribute);
-                if (modifiers == null) continue;
+                if (modifiers == null) {
+                    continue;
+                }
                 for (AttributeModifier modifier : modifiers){
                     if (modifier.getOperation() == validOperation) value += modifier.getAmount();
                 }
