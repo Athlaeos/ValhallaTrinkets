@@ -3,11 +3,11 @@ package me.athlaeos.valhallatrinkets;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
 import org.bukkit.util.io.BukkitObjectOutputStream;
-import org.yaml.snakeyaml.external.biz.base64Coder.Base64Coder;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Base64;
 
 public class ItemSerializer {
     public static String toBase64(ItemStack itemStack) throws IllegalStateException {
@@ -20,7 +20,7 @@ public class ItemSerializer {
 
             // Serialize that array
             dataOutput.close();
-            return Base64Coder.encodeLines(outputStream.toByteArray());
+            return Base64.getEncoder().encodeToString(outputStream.toByteArray());
         } catch (Exception e) {
             ValhallaTrinkets.getPlugin().getServer().getLogger().severe("Unable to save itemstack from encoded data");
             throw new IllegalStateException("Unable to save item stacks.", e);
@@ -29,7 +29,7 @@ public class ItemSerializer {
 
     public static ItemStack itemStackFromBase64(String data) {
         try {
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64Coder.decodeLines(data));
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(Base64.getMimeDecoder().decode(data));
             BukkitObjectInputStream dataInput = new BukkitObjectInputStream(inputStream);
 
             ItemStack i = (ItemStack) dataInput.readObject();
