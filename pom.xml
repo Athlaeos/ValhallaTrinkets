@@ -17,7 +17,7 @@
     <properties>
         <spigotVersion>1.19</spigotVersion>
         <javaVersion>17</javaVersion>
-        <testServerPath>C:\Users\Athlaeos\Desktop\Minecraft Servers\26.1.2\plugins</testServerPath>
+        <testServerPath>C:\Users\Athlaeos\Desktop\Minecraft Servers\26.2\plugins</testServerPath>
         <shadedPackage>me.athlaeos.valhallatrinkets.shaded</shadedPackage>
 
         <!-- Do not change the following properties -->
